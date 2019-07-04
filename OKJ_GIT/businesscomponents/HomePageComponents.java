@@ -1300,7 +1300,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.txtBoxPassword.getObjectname());
 			commonFunction.hitEnterKey(getPageElement(HomePageObjects.txtBoxPassword),
 					HomePageObjects.txtBoxPassword.getObjectname());
-			webdriverutil.waitUntilPageLoaded(20);
+			//webdriverutil.waitUntilPageLoaded(20);
 			if (commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSignOut),
 					HomePageObjects.lnkSignOut.getObjectname())) {
 
