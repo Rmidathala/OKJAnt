@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -41,7 +42,12 @@ public class BrowserStackDriverFactory {
 		desiredCapabilities.setCapability("platform", platformName);
 		desiredCapabilities.setCapability("browser_version", browserVersion);
 		desiredCapabilities.setCapability("browser", browser);
-		// desiredCapabilities.setCapability("screen-resolution","800x600");
+		desiredCapabilities.setCapability("screen-resolution","1366x768");
+		if(browser.toString().toLowerCase().contains("chrome")){
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--start-maximized");
+			desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		}
 		try {
 			driver = new RemoteWebDriver(new URL(browserStackURL), desiredCapabilities);
 		} catch (MalformedURLException e) {
