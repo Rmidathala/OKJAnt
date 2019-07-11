@@ -12,6 +12,7 @@ import org.openqa.selenium.Proxy.ProxyType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -74,7 +75,7 @@ public class WebDriverFactory {
 			options.addArguments("--disable-extensions"); // disabling extensions
 			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			options.addArguments("--no-sandbox"); // Bypass OS security model
-			options.addArguments("headless");
+			options.addArguments("--headless");
 			options.addArguments("window-size=1366x768");
 
 			// options.addArguments("--dns-prefetch-disable");
