@@ -7,6 +7,7 @@ public enum ProductListingPageObjects implements PageObjects {
 	
 	
 	itmFirstProduct("//div[@class='product-listing__list slider']/a[1]",XPATH,"First Product on the Product Listing Page"),
+	itmSecondProduct("//div[@class='product-listing__list slider']/a[2]",XPATH,"Second Product on the Product Listing Page"),
 	btnFilter("//div[@class='toolbar-filter__label']",XPATH,"Filter button"),
 	gridViewEnabled("//strong[@class='toolbar-modes__mode active toolbar-modes--grid']",XPATH,"Grid View Enabled"),
 	listViewDisabled("//a[@class='toolbar-modes__mode toolbar-modes--list']",XPATH,"List View Disabled"),

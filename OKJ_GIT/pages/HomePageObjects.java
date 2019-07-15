@@ -111,14 +111,14 @@ public enum HomePageObjects implements PageObjects {
 	//User Account
 	btnUserAccount("//a[@title='User account']/span[@class='right-links__item--text']/i",XPATH,"User Account button"),
 	
-	//Sign In Model
+	//Sign In Model - Prod
 	btnSignIn("//a[text()='Sign In']",XPATH,"Sign Button in User Account"),
 	btnSignUp("//a[text()='Sign Up']",XPATH,"Sign Up Button"),
-	lnkOrders("(//a[@class='sign-in-modal' and text()='Orders'])[1]",XPATH,"Orders link in Your Account Model Overlay"),
-	lnkRegisteredProducts("(//a[@class='sign-in-modal' and text()='Registered Products'])[1]",XPATH,"Registered Products Link in your Account Model Overlay"),
-	lnkAccountInfo("(//a[@class='sign-in-modal' and text()='Account Information'])[1]",XPATH,"Account Information LInk in your Account Model Overlay"),
-	lnkAddressBook("(//a[@class='sign-in-modal' and text()='Address Book'])[1]",XPATH,"Address Book link in your Account Model Overlay"),
-	lnkReviews("(//a[@class='sign-in-modal' and text()='Reviews'])[1]",XPATH,"Reviews Link in Your Account Overlay"),
+	lnkOrders("(//a[text()='Orders'])[1]",XPATH,"Orders link in Your Account Model Overlay"),
+	lnkRegisteredProducts("(//a[text()='Registered Products'])[1]",XPATH,"Registered Products Link in your Account Model Overlay"),
+	lnkAccountInfo("(//a[text()='Account Information'])[1]",XPATH,"Account Information LInk in your Account Model Overlay"),
+	lnkAddressBook("(//a[text()='Address Book'])[1]",XPATH,"Address Book link in your Account Model Overlay"),
+	lnkReviews("(//a[text()='Reviews'])[1]",XPATH,"Reviews Link in Your Account Overlay"),
 	txtBoxEmailAddr("//input[@id='customer-email']",XPATH,"Email Address text Box in Sign In Model Overlay"),
 	txtBoxPassword("//input[@name='password']",XPATH,"Password Text Box in Sign In Overlay"),
 	btnSignInModelOverlay("//button[@class='action action-login secondary']",XPATH,"Sign In Button"),
@@ -127,6 +127,16 @@ public enum HomePageObjects implements PageObjects {
 	lnkSighUp("//a[@class='action action-signup']",XPATH,"DON'T HAVE AN ACCOUNT YET? SIGN UP link in Sign In Model."),
 	btnClose("//button[@class='action-close']",XPATH,"Close the Sign In Model"),
 	txtWelcomeAfterLogin("//span[@class='account-nav__content__welcome']",XPATH,"Welcome Text After Login"),
+	
+	// Sign In Model - Staging
+	btnSignInSTG("//a[text()='Sign In']",XPATH,"Sign Button in User Account"),
+	btnSignUpSTG("//a[text()='Sign Up']",XPATH,"Sign Up Button"),
+	lnkOrdersSTG("(//a[text()='Orders'])[2]",XPATH,"Orders link in Your Account Model Overlay"),
+	lnkRegisteredProductsSTG("(//a[text()='Registered Products'])[2]",XPATH,"Registered Products Link in your Account Model Overlay"),
+	lnkAccountInfoSTG("(//a[text()='Account Information'])[2]",XPATH,"Account Information LInk in your Account Model Overlay"),
+	lnkAddressBookSTG("(//a[text()='Address Book'])[2]",XPATH,"Address Book link in your Account Model Overlay"),
+	lnkReviewsSTG("(//a[text()='Reviews'])[2]",XPATH,"Reviews Link in Your Account Overlay"),
+	
 	//Chat close button
 	btnChatClose("//input[@id='tcChat_btnCloseChat_img']",XPATH,"Close the chat window"),
 	
@@ -136,6 +146,7 @@ public enum HomePageObjects implements PageObjects {
 	//Footer
 	lblParts("//h3[@class='footer__headline' and text()='Parts']",XPATH,"Footer label: Parts"),
 	txtBoxPartSearch("//input[@class='form__input footer__form-input']",XPATH,"Footer - Part Search text Box"),
+	PartsSearchList("//div[@id='footer-partfinder__suggestions']/ul/li",XPATH,"Footer - Parts Search Suggesstions"),
 	txtPartContactService("//div[@class='form__info footer__form-info']/span",XPATH,"Footer - Parts - Help identifying model"),
 	txtSearchSuggestion("//input[@class='form__input footer__form-input']/following::li[1]",XPATH,"Parts Search Suggestion"),
 	msgPartSearchError("footer-partfinder__no-results",ID,"Home Page - Footer - Error messsage for invalid part model#"),
@@ -225,8 +236,8 @@ public enum HomePageObjects implements PageObjects {
 	
 	
 	//View all Smokers and Grills
-	btnViewAllSmokersGrills("//div[@class='catalog-categories__viewall']/a",XPATH,"view all smokers and grills button"),
-	
+	btnViewAllSmokersGrills("//a[text()='View all Smokers & Grills']",XPATH,"view all smokers and grills button"),
+	lblSmokerGrills("page-title-heading",ID,"Smokers and Grills - Label - Smokers and Grills"),
 	lnkLiveChat("//div[@class='footer__live-chat']/div",XPATH,"Live Chat Link in footer"),
 	
 	//User Account After Logged In

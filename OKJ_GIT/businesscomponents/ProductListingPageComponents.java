@@ -146,6 +146,19 @@ public class ProductListingPageComponents extends ReusableLibrary {
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
+	
+	public void selectInStockProductStaging() {
+		try {
+			webdriverutil.waitUntilPageReadyStateComplete(30);
+			
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.itmSecondProduct),
+					ProductListingPageObjects.itmSecondProduct.getObjectname());
+			webdriverutil.waitUntilPageReadyStateComplete(30);
+		}catch(Exception e) {
+			report.updateTestLog("Product Listing Page - Select a product -  Validation",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
 
 	public void validateProductFilterSection() {
 		try {
