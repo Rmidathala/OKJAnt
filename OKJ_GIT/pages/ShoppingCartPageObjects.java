@@ -17,7 +17,7 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	lblTotalPrice("cart-item__info__subtotal",CLASSNAME,"Totol Price Lable on the Shopping Cart Page"),
 	txtTotalPrice("//div[@class='cart-item__info__subtotal']/span/span/span",XPATH,"Total Price in Doller on Shopping Cart Page"),
 	lnkEdit("//a[@class='action action-edit']",XPATH,"Edit Product on Shopping Cart Page"),
-	lnkRemoveItem("//a[@class='action action-delete']",XPATH,"Remove Item on Shopping Cart Page"),
+	lnkRemoveItem("//a[@title='Remove item']",XPATH,"Remove Item on Shopping Cart Page"),
 	txtBoxPromoCode("//input[@id='coupon_code']",XPATH,"Promo Code Text Box on Shopping Cart Page"),
 	btnApply("//button[@class='action apply button--secondary button']",XPATH,"Apply Promo code button on shopping cart page"),
 	titleYourOrder("cart-summary__title",CLASSNAME,"Your Order title on Order section on Shopping Cart Page"),

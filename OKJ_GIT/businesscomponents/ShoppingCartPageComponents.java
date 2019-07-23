@@ -257,7 +257,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.btnPayPal),
 					ShoppingCartPageObjects.btnPayPal.getObjectname());
-			if(driver.getCurrentUrl().contains("https://www.paypal.com/")) {
+			if(driver.getCurrentUrl().contains("https://www.paypal.com/") || driver.getCurrentUrl().contains("paypal.com")) {
 				report.updateTestLog("Verify user is navigated to Paypal page",
 						"The user is successfully navigated to Paypal Payment page",
 						Status.PASS);

@@ -12,8 +12,8 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	overlayStarReviews("//div[@class='bv_modal_outer_content']",XPATH,"Details of the rating stars overlay"),
 	btnReadReviews("//button[@class='bv_button_buttonFull ' or @class='bv_button_buttonFull']",XPATH,"Read Reviews button in stars details overlay"),
 	
-	lblAvgRatingNumber("//button[@class='bv_avgRating ']",XPATH,"Average rating in number"),
-	lblTotalReviews("//button[@class='bv_numReviews_text ']",XPATH,"Total number of reviews"),
+	lblAvgRatingNumber("//button[@class='bv_avgRating' or @class='bv_avgRating ']",XPATH,"Average rating in number"),
+	lblTotalReviews("//button[@class='bv_numReviews_text ' or @class='bv_numReviews_text']",XPATH,"Total number of reviews"),
 	lnkWriteAReview("//button[(@class='bv_button_buttonMinimalist ' or @class='bv_button_buttonMinimalist' )and @id='WAR']",XPATH,"Write a review link"),
 	lnkAskAQuestion("//button[(@class='bv_button_buttonMinimalist '  or @class='bv_button_buttonMinimalist') and @id='AAQ']",XPATH,"Ask a Question link"),
 	
