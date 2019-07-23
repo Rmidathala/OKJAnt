@@ -8,7 +8,7 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblProductTitle("//h1[@class='page-title']/span", XPATH, "Product Title"),
 	imgProductImage("//div[@class='fotorama__stage__frame fotorama__active fotorama_vertical_ratio fotorama__loaded fotorama__loaded--img']/img",XPATH,"Product Image"),
 	lblProductPrice("//div[@class='price__container']/div[@class='price-box price__price-box price-final_price']/span[@class='price price__price-box price-final_price tax weee']/span[1]",XPATH,"Product Price"),
-	btnProductStarRating("//button[@class='bv_stars_button_container ' or @class='bv_stars_button_container']",XPATH,"Product Start Rating"),
+	btnProductStarRating("//button[@class='bv_stars_button_container' or @class='bv_stars_button_container ']",XPATH,"Product Start Rating"),
 	overlayStarReviews("//div[@class='bv_modal_outer_content']",XPATH,"Details of the rating stars overlay"),
 	btnReadReviews("//button[@class='bv_button_buttonFull ']",XPATH,"Read Reviews button in stars details overlay"),
 	

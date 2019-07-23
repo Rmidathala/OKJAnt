@@ -151,8 +151,8 @@ public class ProductListingPageComponents extends ReusableLibrary {
 		try {
 			webdriverutil.waitUntilPageReadyStateComplete(30);
 			
-			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.itmSecondProduct),
-					ProductListingPageObjects.itmSecondProduct.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.itmThirdProduct),
+					ProductListingPageObjects.itmThirdProduct.getObjectname());
 			webdriverutil.waitUntilPageReadyStateComplete(30);
 		}catch(Exception e) {
 			report.updateTestLog("Product Listing Page - Select a product -  Validation",
