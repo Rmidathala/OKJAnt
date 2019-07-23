@@ -10,12 +10,12 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblProductPrice("//div[@class='price__container']/div[@class='price-box price__price-box price-final_price']/span[@class='price price__price-box price-final_price tax weee']/span[1]",XPATH,"Product Price"),
 	btnProductStarRating("//button[@class='bv_stars_button_container' or @class='bv_stars_button_container ']",XPATH,"Product Start Rating"),
 	overlayStarReviews("//div[@class='bv_modal_outer_content']",XPATH,"Details of the rating stars overlay"),
-	btnReadReviews("//button[@class='bv_button_buttonFull ']",XPATH,"Read Reviews button in stars details overlay"),
+	btnReadReviews("//button[@class='bv_button_buttonFull ' or @class='bv_button_buttonFull']",XPATH,"Read Reviews button in stars details overlay"),
 	
 	lblAvgRatingNumber("//button[@class='bv_avgRating ']",XPATH,"Average rating in number"),
 	lblTotalReviews("//button[@class='bv_numReviews_text ']",XPATH,"Total number of reviews"),
-	lnkWriteAReview("//button[@class='bv_button_buttonMinimalist ' and @id='WAR']",XPATH,"Write a review link"),
-	lnkAskAQuestion("//button[@class='bv_button_buttonMinimalist ' and @id='AAQ']",XPATH,"Ask a Question link"),
+	lnkWriteAReview("//button[(@class='bv_button_buttonMinimalist ' or @class='bv_button_buttonMinimalist' )and @id='WAR']",XPATH,"Write a review link"),
+	lnkAskAQuestion("//button[(@class='bv_button_buttonMinimalist '  or @class='bv_button_buttonMinimalist') and @id='AAQ']",XPATH,"Ask a Question link"),
 	
 	btnAddToCart("product-addtocart-button",ID,"Add to cart button"),
 	btnWhereToBuy("//div[@class='price-spider']/div",XPATH,"Where To Buy button"),
