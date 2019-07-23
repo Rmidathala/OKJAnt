@@ -406,7 +406,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuParts),
 					HomePageObjects.lnkSubMenuParts.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/parts?layout=grid") || driver.getCurrentUrl().contains("/support")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/parts?layout=grid") || driver.getCurrentUrl().contains("/support") || driver.getCurrentUrl().contains("/catalogsearch/result/")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Parts of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Parts", Status.PASS);
 			} else {
@@ -1475,7 +1475,7 @@ public class HomePageComponents extends ReusableLibrary {
 			// Validate Navigation Menu Smokers & Grill
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
-			if (driver.getCurrentUrl().contains("/smokers-and-grills")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills") || driver.getCurrentUrl().contains("/smokers")) {
 				report.updateTestLog("Verify Navigation Menu link - Smokers & Grills",
 						"User is successfully Navigated to Smokers & Grill Page", Status.PASS);
 			} else {
@@ -1497,7 +1497,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuOffsetSmokers),
 					HomePageObjects.lnkSubMenuOffsetSmokers.getObjectname());
-			if (driver.getCurrentUrl().contains("/smokers-and-grills/offset-smokers")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills/offset-smokers") || driver.getCurrentUrl().contains("/smokers/offset-smokers")) {
 				report.updateTestLog(
 						"Verify Sub-Navigtion Menu - Offset Smokers of Navigation Menu link - Smokers & Grill",
 						"User is successfully Navigated to sub-Navigation Menu - Offset-Smokers", Status.PASS);
@@ -1517,7 +1517,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuSmokerGrillCombo),
 					HomePageObjects.lnkSubMenuSmokerGrillCombo.getObjectname());
-			if (driver.getCurrentUrl().contains("/smokers-and-grills/smoker-grill-combos")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills/smoker-grill-combos") || driver.getCurrentUrl().contains("/smokers/combinations")) {
 				report.updateTestLog(
 						"Verify Sub-Navigtion Menu - Smokers/Grill Combos of Navigation Menu link - Smokers & Grill",
 						"User is successfully Navigated to sub-Navigation Menu - Smokers/Grill Combos", Status.PASS);
@@ -1538,7 +1538,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuCharCoalGrill),
 					HomePageObjects.lnkSubMenuCharCoalGrill.getObjectname());
-			if (driver.getCurrentUrl().contains("/smokers-and-grills/charcoal-grills")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills/charcoal-grills") || driver.getCurrentUrl().contains("/smokers/charcoal-grills")) {
 				report.updateTestLog(
 						"Verify Sub-Navigtion Menu - Charcoal Grills of Navigation Menu link - Smokers & Grill",
 						"User is successfully Navigated to sub-Navigation Menu - Charcoal Grills", Status.PASS);
@@ -1586,7 +1586,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuTools),
 					HomePageObjects.lnkSubMenuTools.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/tools")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/tools") || driver.getCurrentUrl().contains("/accessories/tools")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Tools of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Tools", Status.PASS);
 			} else {
@@ -1603,7 +1603,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuCovers),
 					HomePageObjects.lnkSubMenuCovers.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/covers")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/covers") || driver.getCurrentUrl().contains("/accessories/covers")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Covers of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Covers", Status.PASS);
 			} else {
@@ -1621,7 +1621,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuWood),
 					HomePageObjects.lnkSubMenuWood.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/wood")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/wood") || driver.getCurrentUrl().contains("/accessories/wood")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Wood of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Wood", Status.PASS);
 			} else {
@@ -1638,7 +1638,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuApparel),
 					HomePageObjects.lnkSubMenuApparel.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/apparel")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/apparel") || driver.getCurrentUrl().contains("/accessories/apparel")) {
 				report.updateTestLog(
 						"Verify Sub-Navigtion Menu - Apparel of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Apparel", Status.PASS);
@@ -1657,7 +1657,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuMods),
 					HomePageObjects.lnkSubMenuMods.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/mods")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/mods") || driver.getCurrentUrl().contains("/accessories/mods")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Mods of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Mods", Status.PASS);
 			} else {
@@ -1674,7 +1674,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuParts),
 					HomePageObjects.lnkSubMenuParts.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts/parts?layout=grid")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts/parts?layout=grid") || driver.getCurrentUrl().contains("/catalogsearch/result/")) {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Parts of Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to sub-Navigation Menu - Parts", Status.PASS);
 			} else {

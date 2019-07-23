@@ -92,6 +92,47 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 		}
 	}
 	
+	public void validateProductDetailsPage_STG() {
+		try {
+			Thread.sleep(5000);
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblProductTitle), ProductDetailsPageObjects.lblProductTitle.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgProductImage), ProductDetailsPageObjects.imgProductImage.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblProductPrice), ProductDetailsPageObjects.lblProductPrice.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnProductStarRating), ProductDetailsPageObjects.btnProductStarRating.getObjectname());
+			commonFunction.mouseOver(getPageElement(ProductDetailsPageObjects.btnProductStarRating), ProductDetailsPageObjects.btnProductStarRating.getObjectname());
+			
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.overlayStarReviews), ProductDetailsPageObjects.overlayStarReviews.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnReadReviews), ProductDetailsPageObjects.btnReadReviews.getObjectname());
+		
+			commonFunction.mouseOver(getPageElement(ProductDetailsPageObjects.lblProductPrice), ProductDetailsPageObjects.lblProductPrice.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblAvgRatingNumber), ProductDetailsPageObjects.lblAvgRatingNumber.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblTotalReviews), ProductDetailsPageObjects.lblTotalReviews.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lnkWriteAReview), ProductDetailsPageObjects.lnkWriteAReview.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lnkAskAQuestion), ProductDetailsPageObjects.lnkAskAQuestion.getObjectname());
+			
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnWhereToBuy), ProductDetailsPageObjects.btnWhereToBuy.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.txtProductInfoOverview_STG), ProductDetailsPageObjects.txtProductInfoOverview_STG.getObjectname());
+			
+			
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.videoProduct), ProductDetailsPageObjects.videoProduct.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgCloserLook), ProductDetailsPageObjects.imgCloserLook.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.slidRightCloserLook), ProductDetailsPageObjects.slidRightCloserLook.getObjectname());
+			
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgDimensions), ProductDetailsPageObjects.imgDimensions.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgCookingArea), ProductDetailsPageObjects.imgCookingArea.getObjectname());
+			
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeaturesAndSpecifications), ProductDetailsPageObjects.lblFeaturesAndSpecifications.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeatures), ProductDetailsPageObjects.lblFeatures.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblSpecifiations), ProductDetailsPageObjects.lblSpecifiations.getObjectname());
+			
+		
+		}catch(Exception e) {
+			report.updateTestLog("Product Details Page - Validate the Produc details Page",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
 	public void validateItemAddedToCartModel() {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());

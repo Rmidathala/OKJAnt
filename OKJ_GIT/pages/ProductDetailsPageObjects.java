@@ -20,6 +20,7 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	btnAddToCart("product-addtocart-button",ID,"Add to cart button"),
 	btnWhereToBuy("//div[@class='price-spider']/div",XPATH,"Where To Buy button"),
 	txtProductInfoOverview("//div[@class='body-copy product-info__overview']/div/p",XPATH,"Product Info Overview"),
+	txtProductInfoOverview_STG("//div[@class='body-copy product-info__overview']/div",XPATH,"Product Info Overview"),
 	
 	videoProduct("//div[@class='video-product']",XPATH,"Product video"),
 	imgCloserLook("//div[@class='closer-look__button slick-slide slick-current slick-active']/img",XPATH,"Closer Look image of the product"),
