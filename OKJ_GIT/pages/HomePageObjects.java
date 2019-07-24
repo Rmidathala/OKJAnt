@@ -236,7 +236,7 @@ public enum HomePageObjects implements PageObjects {
 	
 	
 	//View all Smokers and Grills
-	btnViewAllSmokersGrills("//a[text()='View all Smokers & Grills']",XPATH,"view all smokers and grills button"),
+	btnViewAllSmokersGrills("//a[text()='View all Smokers & Grills' or text()='View All Smokers & Grills']",XPATH,"view all smokers and grills button"),
 	lblSmokerGrills("page-title-heading",ID,"Smokers and Grills - Label - Smokers and Grills"),
 	lnkLiveChat("//div[@class='footer__live-chat']/div",XPATH,"Live Chat Link in footer"),
 	

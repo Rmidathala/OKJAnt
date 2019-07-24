@@ -216,8 +216,10 @@ public class CheckOutPageComponents extends ReusableLibrary {
 		try {
 			//commonFunction.scrollIntoView(getPageElement(CheckOutPageObjects.btnContinueToBilling));
 			commonFunction.clickIfElementPresentJavaScript(getPageElement(CheckOutPageObjects.btnContinueToBilling), CheckOutPageObjects.btnContinueToBilling.getObjectname());
+			
 			if(webdriverutil.objectExists(By.xpath(CheckOutPageObjects.btnConfirmAddress.getProperty()))) {
 				commonFunction.clickIfElementPresentJavaScript(getPageElement(CheckOutPageObjects.btnConfirmAddress), CheckOutPageObjects.btnConfirmAddress.getObjectname());
+				Thread.sleep(3000);
 			}
 			if(commonFunction.verifyIfElementIsPresent(getPageElement(CheckOutPageObjects.lblBillingInformationAfterContinueBilling), CheckOutPageObjects.lblBillingInformationAfterContinueBilling.getObjectname())) {
 				report.updateTestLog("Verify user navigated to Billing/Payment Page", "User is successfully Navigated to Billing Page", Status.PASS);
