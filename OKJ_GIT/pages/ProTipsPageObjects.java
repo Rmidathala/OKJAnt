@@ -7,6 +7,32 @@ public enum ProTipsPageObjects implements PageObjects {
 	lnkJumpToTheSmoke("//a[text()='The Smoke']",XPATH,"Pro-Tips Page - Link The Smoke in Jump to Category"),
 	lnkJumpTotheSetup("//a[text()='The Setup']",XPATH,"Pro-Tips Page - Link The SetUp in Jump to Category"),
 	lnkJumpToTheProcess("//a[text()='The Process']",XPATH,"Pro-Tips Page - Link The Process in Jumm to Category"),
+	//Staging
+	lnkJumpToMostPopular_STG("//a[text()='Most Popular']",XPATH,"Pro Tips Page - Stagin - Link - Most Popular in Jump to Category"),
+	lnkJumpToEntertaining_STG("//a[text()='Entertaining']",XPATH,"Pro Tips Page - Staging - Link - Entertaining"),
+	
+	lblMostPopular_STG("//div[@id='accordion__Most Popular']/div[1]",XPATH,"Pro Tips Page - Staging Lable - Most Popular"),
+	lblTakeNotesTwo_STG("//div[@id='accordion__Most Popular']/div[2]/div[1]",XPATH,"Pro Tips Page - Staging - Label - Take Notes Two"),
+	txtParaTakeNotesTwo_STG("//div[@id='accordion__Most Popular']/div[2]/div[2]",XPATH,"Pro Tips Page - Staging - Text Para - Take Notes Two"),
+	
+	lblWrapForAddedMoisture_STG("(//div[@id='accordion-title-wrap-for-added-moisture'])[1]",XPATH,"Pro Tips Page - Stagin - Label - Wrap For Added Moisture"),
+	txtParaWrapForAddedMoisture_STG("//div[@id='accordion__Most Popular']/div[3]/div[2]",XPATH,"Pro Tips Page - Staging Text Para - Wrap For Added Moisture"),
+	
+	lblSeasonYourSmoker_STG("(//div[@id='accordion-title-season-your-smoker'])[1]",XPATH,"Pro Tips Page - Staging Label Season Your Smoker"),
+	txtParaSeasonYourSmoker_STG("//div[@id='accordion__Most Popular']/div[4]/div[2]",XPATH,"Pro Tips Page - Staging Text Para - Season Your Smoker"),
+	
+	lblEntertaining_STG("//div[@id='accordion__Entertaining']/div[1]",XPATH,"Pro -Tips Page - Label - Entertaining"),
+	lblTaeNotesTwo_Entertaining_STG("//div[@id='accordion__Entertaining']/div[2]/div[1]",XPATH,"Pro Tips Page - Under label - Entertaining - Take Notes Two"),
+	txtParaTakeNoteTwo_Entertaining_STG("//div[@id='accordion__Entertaining']/div[2]/div[2]",XPATH,"Pro Tips Page - Under label Entertaining - Take Notes Two - paragraph"),
+	lblDontGiveUp_Entertaining_STG("//div[@id='accordion__Entertaining']/div[3]",XPATH,"Pro - Tips Page - Label - Dont Give Up"),
+	txtParaDontGiveUpEntertaining_STG("//div[@id='accordion__Entertaining']/div[3]/div[2]",XPATH,"Pro - Tips page - Label - paragraph - Dont give Up"),
+	
+	lblWrapForAddedMoisture_Entertaining_STG("//div[@id='accordion__Entertaining']/div[4]",XPATH,"Pro Tips Page - Label - Under Entertaining - Wrap For Added Moisture"),
+	txtParaWrapForAddedMoisture_Entertaining_STG("//div[@id='accordion__Entertaining']/div[4]/div[2]",XPATH,"Pro Tips Page - Label Paragraph for Entertaining - Wrap for added moisture"),
+	
+	lblSeasonYourSmoker_Entertaining_STG("//div[@id='accordion__Entertaining']/div[5]",XPATH,"Pro Tips Page - Staging Label Season Your Smoker"),
+	txtParaSeasonYourSmoker_Entertaining_STG("//div[@id='accordion__Entertaining']/div[5]/div[2]",XPATH,"Pro Tips Page - Staging Text Para - Season Your Smoker"),
+	
 	
 	lblTheSmoke("//div[@id='accordion__The Smoke']/div[1]",XPATH,"Pro-Tips Page - Label - The Smoke"),
 	lblWrapAdddedMoisture("//div[@id='accordion__The Smoke']/div[2]/div[1]",XPATH,"Pro-Tips Page - The Smoke Section - Label - Wrap for Added Moisture"),

@@ -47,6 +47,10 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	//Paypal page
 	iconCharbroiIcon("//div[@class='headerWrapper']/img",XPATH,"Pay Pal Page- Charbroil Icon"),
 	amtTotalAmount("//format-currency[@class='formatCurrency ng-isolate-scope']/span",XPATH,"Pay Pal Page - Total Amount in $"),
+	//Staging paypal
+	iconPaypal("//div[@id='content']/header/p",XPATH,"Pay Pal Logo - Paypal page"),
+	
+	
 	
 	// Estimate and Shipping Tax section
 	titleEstimatedShippingTax("block-shipping-heading",ID,"Estimated Shipping and Tax lable/title"),

@@ -119,6 +119,14 @@ public enum HomePageObjects implements PageObjects {
 	lnkAccountInfo("(//a[text()='Account Information'])[2]",XPATH,"Account Information LInk in your Account Model Overlay"),
 	lnkAddressBook("(//a[text()='Address Book'])[2]",XPATH,"Address Book link in your Account Model Overlay"),
 	lnkReviews("(//a[text()='Reviews'])[2]",XPATH,"Reviews Link in Your Account Overlay"),
+	
+	lnkOrdersLoggedIn("(//a[text()='Orders'])[1]",XPATH,"Orders link in Your Account Model Overlay"),
+	lnkRegisteredProductsLoggedIn("(//a[text()='Registered Products'])[1]",XPATH,"Registered Products Link in your Account Model Overlay"),
+	lnkAccountInfoLoggedIn("(//a[text()='Account Information'])[1]",XPATH,"Account Information LInk in your Account Model Overlay"),
+	lnkAddressBookLoggedIn("(//a[text()='Address Book'])[1]",XPATH,"Address Book link in your Account Model Overlay"),
+	lnkReviewsLoggedIn("(//a[text()='Reviews'])[1]",XPATH,"Reviews Link in Your Account Overlay"),
+	
+	
 	txtBoxEmailAddr("//input[@id='customer-email']",XPATH,"Email Address text Box in Sign In Model Overlay"),
 	txtBoxPassword("//input[@name='password']",XPATH,"Password Text Box in Sign In Overlay"),
 	btnSignInModelOverlay("//button[@class='action action-login secondary']",XPATH,"Sign In Button"),

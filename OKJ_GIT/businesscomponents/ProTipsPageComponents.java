@@ -84,6 +84,34 @@ public class ProTipsPageComponents 	extends ReusableLibrary {
 			}
 		}
 		
+		public void validateProTipsJumpToCategory_STG() {
+			try {
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lblJumpToCategory), ProTipsPageObjects.lblJumpToCategory.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lnkJumpToMostPopular_STG), ProTipsPageObjects.lnkJumpToMostPopular_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lnkJumpToEntertaining_STG), ProTipsPageObjects.lnkJumpToEntertaining_STG.getObjectname());
+			
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lnkJumpToMostPopular_STG), ProTipsPageObjects.lnkJumpToMostPopular_STG.getObjectname());
+				if(driver.getCurrentUrl().contains("/pro-tips/?item=wrap-for-added-moisture#accordion__Most%20Popular")) {
+					report.updateTestLog("Verify user navigated to The Most Popular Section", "User is successfully Navigated to The Most Popular Section", Status.PASS);
+				} else {
+					report.updateTestLog("Verify user navigated to The Most Popular Section", "User is NOT Navigated to The Most PopularSection", Status.FAIL);
+				}
+				
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lnkJumpToEntertaining_STG), ProTipsPageObjects.lnkJumpToEntertaining_STG.getObjectname());
+				if(driver.getCurrentUrl().contains("/pro-tips/?item=wrap-for-added-moisture#accordion__Entertaining")) {
+					report.updateTestLog("Verify user navigated to Entertaining Section", "User is successfully Navigated to Entertaining Section", Status.PASS);
+				} else {
+					report.updateTestLog("Verify user navigated to Entertaining Section", "User is NOT Navigated to Entertaining Section", Status.FAIL);
+				}
+				
+				
+			}catch(Exception e) {
+				report.updateTestLog("Validate Pro-Tips Page - Jump to Category",
+						"Something went wrong!" + e.toString(), Status.FAIL);
+			}
+		}
+		
+		
 		public void validateProTipsPageSubCategories() {
 			try {
 				//validate The Smoke Section
@@ -124,6 +152,39 @@ public class ProTipsPageComponents 	extends ReusableLibrary {
 						"Something went wrong!" + e.toString(), Status.FAIL);
 			}
 		}
+		
+		public void validateProTipsPageSubCategories_STG() {
+			try {
+				//validate The Most Popular Section
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lnkJumpToMostPopular_STG), ProTipsPageObjects.lnkJumpToMostPopular_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lblMostPopular_STG), ProTipsPageObjects.lblMostPopular_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lblTakeNotesTwo_STG), ProTipsPageObjects.lblTakeNotesTwo_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblTakeNotesTwo_STG), ProTipsPageObjects.lblTakeNotesTwo_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaTakeNotesTwo_STG), ProTipsPageObjects.txtParaTakeNotesTwo_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblWrapForAddedMoisture_STG), ProTipsPageObjects.lblWrapForAddedMoisture_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaWrapForAddedMoisture_STG), ProTipsPageObjects.txtParaWrapForAddedMoisture_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblSeasonYourSmoker_STG), ProTipsPageObjects.lblSeasonYourSmoker_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaSeasonYourSmoker_STG), ProTipsPageObjects.txtParaSeasonYourSmoker_STG.getObjectname());
+				
+			
+				//validate The Entertaining Section
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lnkJumpToEntertaining_STG), ProTipsPageObjects.lnkJumpToEntertaining_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.lblEntertaining_STG), ProTipsPageObjects.lblEntertaining_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblTaeNotesTwo_Entertaining_STG), ProTipsPageObjects.lblTaeNotesTwo_Entertaining_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaTakeNoteTwo_Entertaining_STG), ProTipsPageObjects.txtParaTakeNoteTwo_Entertaining_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblDontGiveUp_Entertaining_STG), ProTipsPageObjects.lblDontGiveUp_Entertaining_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaDontGiveUpEntertaining_STG), ProTipsPageObjects.txtParaDontGiveUpEntertaining_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblWrapForAddedMoisture_Entertaining_STG), ProTipsPageObjects.lblWrapForAddedMoisture_Entertaining_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaWrapForAddedMoisture_Entertaining_STG), ProTipsPageObjects.txtParaWrapForAddedMoisture_Entertaining_STG.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(ProTipsPageObjects.lblSeasonYourSmoker_Entertaining_STG), ProTipsPageObjects.lblSeasonYourSmoker_Entertaining_STG.getObjectname());
+				commonFunction.verifyIfElementIsPresent(getPageElement(ProTipsPageObjects.txtParaSeasonYourSmoker_Entertaining_STG), ProTipsPageObjects.txtParaSeasonYourSmoker_Entertaining_STG.getObjectname());
+				
+			}catch(Exception e) {
+				report.updateTestLog("Validate Pro-Tips Page - Subcategories",
+						"Something went wrong!" + e.toString(), Status.FAIL);
+			}
+		}
+		
 		
 		public void validateProTipsMoreFromCraftSection() {
 			try{

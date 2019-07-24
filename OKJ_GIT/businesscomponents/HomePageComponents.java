@@ -1428,16 +1428,16 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnSignInModelOverlay),
 					HomePageObjects.btnSignInModelOverlay.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkOrders),
-					HomePageObjects.lnkOrders.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkRegisteredProducts),
-					HomePageObjects.lnkRegisteredProducts.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkAccountInfo),
-					HomePageObjects.lnkAccountInfo.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkAddressBook),
-					HomePageObjects.lnkAddressBook.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkReviews),
-					HomePageObjects.lnkReviews.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkOrdersLoggedIn),
+					HomePageObjects.lnkOrdersLoggedIn.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkRegisteredProductsLoggedIn),
+					HomePageObjects.lnkRegisteredProductsLoggedIn.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkAccountInfoLoggedIn),
+					HomePageObjects.lnkAccountInfoLoggedIn.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkAddressBookLoggedIn),
+					HomePageObjects.lnkAddressBookLoggedIn.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkReviewsLoggedIn),
+					HomePageObjects.lnkReviewsLoggedIn.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSignOut),
 					HomePageObjects.lnkSignOut.getObjectname());
 		} catch (Exception e) {
@@ -2086,10 +2086,9 @@ public class HomePageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnCreateAccount),
 					HomePageObjects.btnCreateAccount.getObjectname());
 			Thread.sleep(2000);
-			if (commonFunction.isElementPresentContainsText(
-					getPageElement(AccountInformationPageObjects.msgSuccessfulSignUP),
-					AccountInformationPageObjects.msgSuccessfulSignUP.getObjectname(),
-					"Thank you for registering with Oklahoma Joe's.")) {
+			if (commonFunction.verifyIfElementIsPresent(
+					getPageElement(AccountInformationPageObjects.myAccountlbl),
+					AccountInformationPageObjects.myAccountlbl.getObjectname())) {
 				report.updateTestLog("Verify user is successfully sign up and new account created",
 						"User is successfully signed up and account is created", Status.PASS);
 			} else {
@@ -2202,8 +2201,8 @@ public class HomePageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
 					HomePageObjects.btnUserAccount.getObjectname());
-			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkAddressBook),
-					HomePageObjects.lnkAddressBook.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkAddressBookLoggedIn),
+					HomePageObjects.lnkAddressBookLoggedIn.getObjectname());
 			if (commonFunction.verifyIfElementIsPresent(getPageElement(AccountInformationPageObjects.lnkAddNewAddress),
 					AccountInformationPageObjects.lnkAddNewAddress.getObjectname())) {
 				report.updateTestLog("Verify user navigated to Address Book Page",

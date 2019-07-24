@@ -133,6 +133,7 @@ public class PartListingPageScenario extends ReusableLibrary {
 			String partNotFoundMsg = dataTable.getData("General_Data","PartNotFoundMsg");
 			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel), productModelNumber1, PartListingPageObjects.txtBoxModel.getObjectname());
 			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
+			Thread.sleep(2000);
 			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtItsCompatileMsg), PartListingPageObjects.txtItsCompatileMsg.getObjectname(), partCompatibleMsg);
 			
 			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel),productModelNumber2, PartListingPageObjects.txtBoxModel.getObjectname());

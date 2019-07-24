@@ -312,7 +312,16 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
-	
+	public void validatePaypalPageAmount_STG() {
+		try {
+			navigateToPayPalPage();
+			commonFunction.verifyIfElementIsPresent(getPageElement(ShoppingCartPageObjects.iconPaypal),
+					ShoppingCartPageObjects.iconPaypal.getObjectname());
+		}catch(Exception e) {
+			report.updateTestLog("Shipping Cart -  validate Paypal",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
 	public void validateEmptyShippingCartPage() {
 		try {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ShoppingCartPageObjects.lblShippingCart0Items),
