@@ -1,5 +1,7 @@
 package businesscomponents;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 
 import supportlibraries.ReusableLibrary;
@@ -235,8 +237,12 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 	
 	public void emptycart() {
 		try {
+			
+			List<WebElement> removeItemLinks = commonFunction.getElementsByProperty(ShoppingCartPageObjects.lnkRemoveItem.getProperty(), ShoppingCartPageObjects.lnkRemoveItem.getLocatorType().toString());
+			for(@SuppressWarnings("unused") WebElement removeItem: removeItemLinks) {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkRemoveItem),
 					ShoppingCartPageObjects.lnkRemoveItem.getObjectname());
+			}
 			if(commonFunction.verifyIfElementIsPresent(getPageElement(ShoppingCartPageObjects.txtNoItems),
 					ShoppingCartPageObjects.txtNoItems.getObjectname())) {
 				report.updateTestLog("Verify if the Cart if empty",

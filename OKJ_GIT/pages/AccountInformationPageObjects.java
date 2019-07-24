@@ -15,7 +15,7 @@ public enum AccountInformationPageObjects implements PageObjects{
 	msgRecipesPromo("//div[@class='dashboard-info__column']/p[2]",XPATH,"Get Recipes and prmotion... message"),
 	lnkEditEmailPreferences("//a[@class='action edit']",XPATH,"Edit email preferences link in Account Information Page"),
 	titlManageAccount("//h4[@class='text-left block-collapsible-nav account-customer-nav__title select-dropdown__title']",XPATH,"Manage Account Title on Account Information Page"),
-	msgSuccessfulSignUP("//div[@role='alert']/div/div",XPATH,"Account Info Page - Successful sign up msg - Thank you for registering with Oklahoma Joe's."),
+	msgSuccessfulSignUP("//div[@class='messages']/div/div",XPATH,"Account Info Page - Successful sign up msg - Thank you for registering with Oklahoma Joe's."),
 	
 	//Manage Account
 	

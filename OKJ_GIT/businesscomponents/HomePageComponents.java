@@ -567,7 +567,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkProductHelp.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSupportCenter),
 					HomePageObjects.lnkSupportCenter.getObjectname());
-			driver.navigate().refresh();
+			
 			// Validate Contact US in Footer
 
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblContactUs),
@@ -578,6 +578,10 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lblMonToFri.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSendEmail),
 					HomePageObjects.lnkSendEmail.getObjectname());
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 			if (liveTime.getHour() < 9 & liveTime.getHour() > 21) {
 				commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblChatBusinessHour),
 						HomePageObjects.lblChatBusinessHour.getObjectname());
@@ -1566,7 +1570,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuDrumSmokers),
 					HomePageObjects.lnkSubMenuDrumSmokers.getObjectname());
-			if (driver.getCurrentUrl().contains("/smokers-and-grills/drum-smokers")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills/drum-smokers") || driver.getCurrentUrl().contains("/smokers/precision-smokers")) {
 				report.updateTestLog(
 						"Verify Sub-Navigtion Menu -Drum Smokers of Navigation Menu link - Smokers & Grill",
 						"User is successfully Navigated to sub-Navigation Menu - Drum Smokers", Status.PASS);
@@ -1689,11 +1693,12 @@ public class HomePageComponents extends ReusableLibrary {
 				report.updateTestLog("Verify Sub-Navigtion Menu - Parts of Navigation Menu link - Accessories & Parts",
 						"User is NOT Navigated to sub-Navigation Menu - Parts", Status.FAIL);
 			}
+			if(!driver.getCurrentUrl().contains("mcstaging")) {
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSubMenuPartsPageTitle),
 					HomePageObjects.txtSubMenuPartsPageTitle.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSubMenuPartsPageDescription),
 					HomePageObjects.txtSubMenuPartsPageDescription.getObjectname());
-
+			}
 		} catch (Exception e) {
 			report.updateTestLog("Validation of Sub Menus of Accessories & Parts ",
 					"Something went wrong!" + e.toString(), Status.FAIL);
@@ -1882,7 +1887,7 @@ public class HomePageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviAccessoriesAndParts),
 					HomePageObjects.lnkNaviAccessoriesAndParts.getObjectname());
-			if (driver.getCurrentUrl().contains("/accessories-and-parts")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts") || driver.getCurrentUrl().contains("/accessories")) {
 				report.updateTestLog("Verify Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to Accessories & Parts Page", Status.PASS);
 			} else {
