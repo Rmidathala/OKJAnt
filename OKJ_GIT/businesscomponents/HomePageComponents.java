@@ -180,7 +180,8 @@ public class HomePageComponents extends ReusableLibrary {
 			driver.manage().window().maximize();
 			String applicationURL = dataTable.getData("General_Data", "ApplicationURL");
 			driver.get(applicationURL);
-
+			Thread.sleep(5000);
+			driver.navigate().refresh();
 			report.updateTestLog("Invoke Application", "Invoked the application under test @ " + applicationURL,
 					Status.DONE);
 			System.out.println("Application is launched....");
