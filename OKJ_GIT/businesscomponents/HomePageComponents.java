@@ -6,6 +6,7 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -566,7 +567,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkProductHelp.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSupportCenter),
 					HomePageObjects.lnkSupportCenter.getObjectname());
-
+			driver.navigate().refresh();
 			// Validate Contact US in Footer
 
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblContactUs),
@@ -1268,6 +1269,12 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.btnSignIn.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.btnSignUp),
 					HomePageObjects.btnSignUp.getObjectname());
+ 			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
+						HomePageObjects.btnUserAccount.getObjectname());
+			}
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkOrders),
 					HomePageObjects.lnkOrders.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkRegisteredProducts),
