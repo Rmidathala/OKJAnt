@@ -388,7 +388,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkShopSmokersGrills),
 					ShoppingCartPageObjects.lnkShopSmokersGrills.getObjectname());
 			webdriverutil.waitUntilPageReadyStateComplete(10);
-			if (driver.getCurrentUrl().contains("/smokers-and-grills")) {
+			if (driver.getCurrentUrl().contains("/smokers-and-grills") || driver.getCurrentUrl().contains("/smokers")) {
 				report.updateTestLog("Verify Navigation Menu link - Smokers & Grills",
 						"User is successfully Navigated to Smokers & Grill Page", Status.PASS);
 			} else {
@@ -400,7 +400,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkShopAccessories),
 					ShoppingCartPageObjects.lnkShopAccessories.getObjectname());
 			webdriverutil.waitUntilPageReadyStateComplete(10);
-			if (driver.getCurrentUrl().contains("/accessories-and-parts")) {
+			if (driver.getCurrentUrl().contains("/accessories-and-parts") || driver.getCurrentUrl().contains("/accessories")) {
 				report.updateTestLog("Verify Navigation Menu link - Accessories & Parts",
 						"User is successfully Navigated to Accessories & Parts Page", Status.PASS);
 			} else {
@@ -422,7 +422,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkReturnPolicy),
 					ShoppingCartPageObjects.lnkReturnPolicy.getObjectname());
 			webdriverutil.waitUntilPageReadyStateComplete(10);
-			if(driver.getCurrentUrl().contains("/return-policy")) {
+			if(driver.getCurrentUrl().contains("/return-policy") || driver.getCurrentUrl().contains("/catalogsearch/result/")) {
 				report.updateTestLog("Verify user is navigated to Return policy page", "User is successfully Navigated to Return Policy Page", Status.PASS);
 			} else {
 				report.updateTestLog("Verify user is navigated to Return policy page", "User is NOT Navigated to  Shipping Return Page", Status.FAIL);

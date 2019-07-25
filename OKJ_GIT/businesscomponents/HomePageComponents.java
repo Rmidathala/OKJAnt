@@ -1969,8 +1969,8 @@ public class HomePageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
 					HomePageObjects.btnUserAccount.getObjectname());
-			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkRegisteredProducts),
-					HomePageObjects.lnkRegisteredProducts.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkRegisteredProductsLoggedIn),
+					HomePageObjects.lnkRegisteredProductsLoggedIn.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(ProductRegistrationPageObjects.lnkRegisterProduct),
 					ProductRegistrationPageObjects.lnkRegisterProduct.getObjectname());
 			if (commonFunction.verifyIfElementIsPresent(

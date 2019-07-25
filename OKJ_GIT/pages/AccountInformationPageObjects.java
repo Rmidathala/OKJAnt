@@ -50,13 +50,13 @@ public enum AccountInformationPageObjects implements PageObjects{
 	txtBoxZip("zip",ID,"Add New Address Page - Zip Code Text Box"),
 	drpDownCountry("country",ID,"Add New Address Page - Country Drop Down"),
 	btnSaveAddress("//button[@title='Save Address']",XPATH,"Add New Address Page - Save Address button"),
-	msgAddressAdded("//div[@role='alert']/div/div",XPATH,"Address book Page - Address Deleted msg -You saved the address."),
+	msgAddressAdded("//div[@class='messages']/div/div",XPATH,"Address book Page - Address Deleted msg -You saved the address."),
 	lnkRemoveAddress("//a[text()='Remove']",XPATH,"Address Book Page - Remove Address link"),
 	
 	lblremoveAddresspopup("//button[@class='action-secondary action-dismiss']/preceding::div[1]",XPATH,"Remove address pop up - label -Are you sure you want to delete this address?"),
 	btnCancel("//button[@class='action-secondary action-dismiss']",XPATH,"Remove Address Pop Up - Cancel button"),
 	btnOk("//button[@class='action-primary action-accept']",XPATH,"Remove Address pop up - OK Button"),	
-	msgAddressDeleted("//div[@role='alert']/div/div",XPATH,"Address book Page - Address Deleted msg -You deleted the address."),
+	msgAddressDeleted("//div[@class='messages']/div/div",XPATH,"Address book Page - Address Deleted msg -You deleted the address."),
 	;
 
 	String strProperty = "";

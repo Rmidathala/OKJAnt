@@ -25,6 +25,9 @@ public enum SupportPageObjects implements PageObjects {
 	descForHowDoISeasonMySmoker("//div[@class='accordion__content']",XPATH,"Product Support Page - FAQ Section - Description for How Do I Season My Smoker"),
 	lnkViewAllFAQs("//a[text()='View All FAQs']",XPATH,"Product Support Page - FAQ Section - View All FAQs Link"),
 	
+	subtitleWhatMaterialOKJSmokers_STG("//div[@id='accordion-title-smoker-materials']",XPATH,"Product Support Page  FAQ Section - Subtitle What material are OKJ smokers made of?"),
+	descForWhatMaterialOKJSmokers_STG("(//div[@class='accordion__content']/p)[1]",XPATH,"Product Support - FAQ Section - Description for What Material are OKJ Smokers"),
+	
 	//Order Help
 	titleOrderHelp("//div[@class='support-orderhelp-links__heading']",XPATH,"Product Support Page - Order Help Section - Title Order Help"),
 	lnkShipping("(//div[@class='support-orderhelp-links__title']/a)[1]",XPATH,"Product Support - Order Help Section - Shipping Link"),

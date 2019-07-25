@@ -84,6 +84,31 @@ public class FAQPageComponents extends ReusableLibrary {
 		}
 	}
 	
+	public void validateFAQsJumpToCategory_STG() {
+		try {
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.lblJumpToCategory), FAQPageObjects.lblJumpToCategory.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.lnkMostPopular), FAQPageObjects.lnkMostPopular.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.lnkProduct), FAQPageObjects.lnkProduct.getObjectname());
+			//commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.lnkSmokingTechnique), FAQPageObjects.lnkSmokingTechnique.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkMostPopular), FAQPageObjects.lnkMostPopular.getObjectname());
+			if(driver.getCurrentUrl().contains("/faqs#accordion__most_popular")) {
+				report.updateTestLog("Verify user navigated to The Most Popular Section", "User is successfully Navigated to The Most Popular Section", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user navigated to The Most Popular Section", "User is NOT Navigated to The Most Popular Section", Status.FAIL);
+			}
+			
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkProduct), FAQPageObjects.lnkProduct.getObjectname());
+			if(driver.getCurrentUrl().contains("/faqs#accordion__product")) {
+				report.updateTestLog("Verify user navigated to The Product Section", "User is successfully Navigated to The Product Section", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user navigated to The Product Section", "User is NOT Navigated to The Product Section", Status.FAIL);
+			}
+		}catch(Exception e) {
+			report.updateTestLog("Validate FAQ Page - Jump to Category",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
 	public void validateFAQPageSubCategories() {
 		try {
 			// Validate The Most Popular Section
@@ -112,6 +137,27 @@ public class FAQPageComponents extends ReusableLibrary {
 		}
 	}
 
+	
+	public void validateFAQPageSubCategories_STG() {
+		try {
+			// Validate The Most Popular Section
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkMostPopular), FAQPageObjects.lnkMostPopular.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.subTitleMostPopular), FAQPageObjects.subTitleMostPopular.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.lblMaterialOKJSmokersMadeOf_STG), FAQPageObjects.lblMaterialOKJSmokersMadeOf_STG.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.txtMaterialOKJSmokersMadeOf_STG), FAQPageObjects.txtMaterialOKJSmokersMadeOf_STG.getObjectname());
+			
+			// Validate The Product Section
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkProduct), FAQPageObjects.lnkProduct.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.subTitleProduct), FAQPageObjects.subTitleProduct.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lblKindOfWoolUsed_STG), FAQPageObjects.lblKindOfWoolUsed_STG.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.txtKindOfWoolUsed_STG), FAQPageObjects.txtKindOfWoolUsed_STG.getObjectname());
+			
+		}catch(Exception e) {
+			report.updateTestLog("Validate FAQ Page - Subcategories",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
 	public void validateFAQPageMoreFromCraftSection() {
 		try{
 			String craftLink1Title = dataTable.getData("General_Data","MoreFromCraftLink1");
@@ -152,6 +198,49 @@ public class FAQPageComponents extends ReusableLibrary {
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
+	
+	
+	public void validateFAQPageMoreFromCraftSection_STG() {
+		try{
+			String craftLink1Title = dataTable.getData("General_Data","MoreFromCraftLink1");
+			String craftLink2Title = dataTable.getData("General_Data","MoreFromCraftLink2");
+			String craftLink3Title = dataTable.getData("General_Data","MoreFromCraftLink3");
+			commonFunction.verifyIfElementIsPresent(getPageElement(FAQPageObjects.titleMoreFromCraft), FAQPageObjects.titleMoreFromCraft.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkSubCategoryLink1), FAQPageObjects.lnkSubCategoryLink1.getObjectname());
+			if(commonFunction.isElementPresentContainsText(getPageElement(FAQPageObjects.headingMoreFromCartLink1Page_STG), FAQPageObjects.headingMoreFromCartLink1Page_STG.getObjectname(), craftLink1Title)) {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 1 "+craftLink1Title, "User is successfully Navigated to More From the Craft -  section Link 1 -"+craftLink1Title, Status.PASS);
+			} else {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 1 -"+craftLink1Title, "User is NOT Navigated to  More From the Craft -  section Link 1 -"+craftLink1Title, Status.FAIL);
+			}
+			driver.navigate().back();
+			
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkSubCategoryLink2), FAQPageObjects.lnkSubCategoryLink2.getObjectname());
+			if(commonFunction.isElementPresentContainsText(getPageElement(FAQPageObjects.headingMoreFromCartLink2Page_STG), FAQPageObjects.headingMoreFromCartLink2Page_STG.getObjectname(), craftLink2Title)) {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 2 "+craftLink2Title, "User is successfully Navigated to More From the Craft -  section Link 1 -"+craftLink2Title, Status.PASS);
+			} else {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 2 -"+craftLink2Title, "User is NOT Navigated to  More From the Craft -  section Link 1 -"+craftLink2Title, Status.FAIL);
+			}
+			driver.navigate().back();
+			
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.lnkSubCategoryLink3), FAQPageObjects.lnkSubCategoryLink3.getObjectname());
+			if(commonFunction.isElementPresentContainsText(getPageElement(FAQPageObjects.headingMoreFromCartLink3Page_STG), FAQPageObjects.headingMoreFromCartLink3Page_STG.getObjectname(), craftLink3Title)) {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 3 "+craftLink3Title, "User is successfully Navigated to More From the Craft -  section Link 1 -"+craftLink3Title, Status.PASS);
+			} else {
+				report.updateTestLog("Verify user is navigated to More from Craft section Link 3 -"+craftLink3Title, "User is NOT Navigated to  More From the Craft -  section Link 1 -"+craftLink3Title, Status.FAIL);
+			}
+			driver.navigate().back();
+			commonFunction.clickIfElementPresent(getPageElement(FAQPageObjects.btnViewAllFromTheCraft), FAQPageObjects.btnViewAllFromTheCraft.getObjectname());
+			if(driver.getCurrentUrl().contains("/the-craft")) {
+				report.updateTestLog("Verify user navigated to The Craft Page", "User is successfully Navigated to The Craft Page", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user navigated to The Craft Page", "User is NOT Navigated to The Craft Page", Status.FAIL);
+			}
+		}catch(Exception e) {
+			report.updateTestLog("Validate FAQ More From Craft Section",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
 	
 	public void validateFAQPageHelpSection() {
 		try {

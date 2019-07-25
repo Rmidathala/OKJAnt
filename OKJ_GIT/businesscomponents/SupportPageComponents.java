@@ -161,7 +161,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.descForCaseLookup), SupportPageObjects.descForCaseLookup.getObjectname());
 			
 			commonFunction.clickIfElementPresent(getPageElement(SupportPageObjects.lnkReturns), SupportPageObjects.lnkReturns.getObjectname());
-			if(driver.getCurrentUrl().contains("/return-policy")) {
+			if(driver.getCurrentUrl().contains("/return-policy") || driver.getCurrentUrl().contains("/catalogsearch/result/")) {
 				report.updateTestLog("Verify user is navigated to Returns Policy page", "User is successfully Navigated to Returns Page", Status.PASS);
 			} else {
 				report.updateTestLog("Verify user is navigated to Returns page", "User is NOT Navigated to  Returns Page", Status.FAIL);
@@ -181,6 +181,24 @@ public class SupportPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.titleFAQ), SupportPageObjects.titleFAQ.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.subtitleHowDoISeasonMySmoker), SupportPageObjects.subtitleHowDoISeasonMySmoker.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.descForHowDoISeasonMySmoker), SupportPageObjects.descForHowDoISeasonMySmoker.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(SupportPageObjects.lnkViewAllFAQs), SupportPageObjects.lnkViewAllFAQs.getObjectname());
+			if(driver.getCurrentUrl().contains("/faqs/")) {
+				report.updateTestLog("Verify user is navigated to FAQ page", "User is successfully Navigated to FAQ Page", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user is navigated to FAQ page", "User is NOT Navigated to  FAQ Page", Status.FAIL);
+			}
+		}catch(Exception e) {
+			report.updateTestLog("Validate Product Support Page -FAQ Section",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
+	public void validateSupportPageFAQSection_STG() {
+		try {
+			commonFunction.scrollIntoView(getPageElement(SupportPageObjects.titleFAQ));
+			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.titleFAQ), SupportPageObjects.titleFAQ.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.subtitleWhatMaterialOKJSmokers_STG), SupportPageObjects.subtitleWhatMaterialOKJSmokers_STG.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.descForWhatMaterialOKJSmokers_STG), SupportPageObjects.descForWhatMaterialOKJSmokers_STG.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(SupportPageObjects.lnkViewAllFAQs), SupportPageObjects.lnkViewAllFAQs.getObjectname());
 			if(driver.getCurrentUrl().contains("/faqs/")) {
 				report.updateTestLog("Verify user is navigated to FAQ page", "User is successfully Navigated to FAQ Page", Status.PASS);

@@ -10,15 +10,25 @@ public enum FAQPageObjects implements PageObjects {
 	lnkMostPopular("//a[text()='Most Popular']",XPATH,"FAQ Page - Jump to Category - Most Popular Link"),
 	lnkProduct("//a[text()='Product']",XPATH,"FAQ Page - Jump to Category - Product link"),
 	lnkSmokingTechnique("//a[text()='Smoking Technique']",XPATH,"FAQ Page - Jumpt To Category - Smoking Technique"),
+	
 	// Most Popular
 	subTitleMostPopular("//div[@id='accordion__most_popular']/div[1]",XPATH,"FAQ Page - Label - Most Popular"),
 	lblHowDoISeasonMySmoker("accordion-title-how-do-i-season-my-smoker",ID,"FAQ Page - Sub Label - How do I Season My Somker"),
 	txtHowDoISeasonMySmoker("//div[@id='accordion__most_popular']/div[2]/div[2]",XPATH,"FAQ Page Paragraph for - How Do I Season My Smoker"),
 	
+	lblMaterialOKJSmokersMadeOf_STG("accordion-title-smoker-materials",ID,"FAQ Page - Sub Lable - What material are OKJ smokers made of?"),
+	txtMaterialOKJSmokersMadeOf_STG("//div[@id='accordion__most_popular']/div[2]/div[2]",XPATH,"FAQ Page Paragraph for - What material are OKJ smokers made of?"),
+	
+	
+	
 	//Product
 	subTitleProduct("//div[@id='accordion__product']/div[1]",XPATH,"FAQ Page - Label- Product"),
 	lblHowDoICleanGrates("accordion-title-clean-grates",ID,"FAQ Page - Sub Label - How Do I Clean Grates"),
 	txtHowDoICleanGrates("//div[@id='accordion__product']/div[2]/div[2]",XPATH,"FAQ Page - Paragraph for - How Do I Clean Grates "),
+	
+	lblKindOfWoolUsed_STG("accordion-title-types-of-wood-product-section",ID,"FAQ Page - Sub Label - What kind of wood can I use? (Product Section)"),
+	txtKindOfWoolUsed_STG("//div[@id='accordion__product']/div[2]/div[2]",XPATH,"FAQ Page - Paragraph for - What kind of wood can I use? (Product Section)"),
+	
 	
 	lblHowDoIMaintainMySmoker("accordion-title-maintain-smoker",ID,"FAQ Page - Sub Label under Product - How Do I Maintain My Smoker"),
 	txtHowDoIMaintainMySmoker("//div[@id='accordion__product']/div[3]/div[2]",XPATH,"FAQ Page - Paragrph for Product - How Do I Maintain My Smoker"),
@@ -37,6 +47,10 @@ public enum FAQPageObjects implements PageObjects {
 	headingMoreFromCartLink1Page("//section[@class='howto-detail-card howto-detail-card--simple']/h1",XPATH,"FAQ- More From Cart Sub Category 1- How to Add Moisture Before And During Cooking"),
 	headingMoreFromCartLink2Page("//section[@class='recipe-detail-card']/h1",XPATH,"FAQ Page - More From Cart Sub Category 2 - Reverse Seared Porterhouse with Hasselback Potatoes"),
 	headingMoreFromCartLink3Page("//section[@class='howto-detail-card howto-detail-card--simple']/h1",XPATH,"FAQ Page - More From Cart Sub Category 3 - How to Monitor Your Smoke"),
+	
+	headingMoreFromCartLink1Page_STG("//section[@class='recipe-detail-card']/h1",XPATH,"FAQ- More From Cart Sub Category 1- Reverse Seared Beef Tenderloin 1"),
+	headingMoreFromCartLink2Page_STG("//section[@class='recipe-detail-card']/h1",XPATH,"FAQ Page - More From Cart Sub Category 2 - Whole Smoked Chicken"),
+	headingMoreFromCartLink3Page_STG("//section[@class='recipe-detail-card']/h1",XPATH,"FAQ Page - More From Cart Sub Category 3 - Rum Smoked Salmon"),
 	
 	btnViewAllFromTheCraft("//a[@class='button text-center']",XPATH,"FAQ Page - Button - View All From The Craft"),
 	
