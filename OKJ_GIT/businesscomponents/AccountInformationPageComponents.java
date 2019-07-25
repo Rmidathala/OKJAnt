@@ -126,6 +126,7 @@ public class AccountInformationPageComponents extends ReusableLibrary {
 		commonFunction.selectAnyElement(getPageElement(AccountInformationPageObjects.drpDownState), state, AccountInformationPageObjects.drpDownState.getObjectname());
 		commonFunction.clearAndEnterText(getPageElement(AccountInformationPageObjects.txtBoxZip), zip, AccountInformationPageObjects.txtBoxZip.getObjectname());
 		commonFunction.clickIfElementPresent(getPageElement(AccountInformationPageObjects.btnSaveAddress), AccountInformationPageObjects.btnSaveAddress.getObjectname());
+		Thread.sleep(8000);
 		if(commonFunction.isElementPresentContainsText(getPageElement(AccountInformationPageObjects.msgAddressAdded), AccountInformationPageObjects.msgAddressAdded.getObjectname(), "You saved the address.")) {
 			report.updateTestLog("Verify Address Added", "Address is Added successfully", Status.PASS);
 		} else {
@@ -145,6 +146,7 @@ public class AccountInformationPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(AccountInformationPageObjects.lnkRemoveAddress), AccountInformationPageObjects.lnkRemoveAddress.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(AccountInformationPageObjects.lblremoveAddresspopup), AccountInformationPageObjects.lblremoveAddresspopup.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(AccountInformationPageObjects.btnOk), AccountInformationPageObjects.btnOk.getObjectname());
+			Thread.sleep(8000);
 			if(commonFunction.isElementPresentContainsText(getPageElement(AccountInformationPageObjects.msgAddressDeleted), AccountInformationPageObjects.msgAddressDeleted.getObjectname(), "You deleted the address.")) {
 				report.updateTestLog("Verify Delete Address", "Address is Deleted successfully", Status.PASS);
 			} else {

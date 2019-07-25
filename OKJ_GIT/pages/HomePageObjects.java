@@ -324,9 +324,11 @@ public enum HomePageObjects implements PageObjects {
 	
 	// Recipe Details Page
 	video("//div[@class='video-product']",XPATH,"Recipe Details Page - Recipe Video"),
+	video_STG("recipe-detail-video",ID,"Recipe Details Page - Recipe Video - Staging site"),
 	ingridientsSection("//section[@class='recipe-detail-ingredients recipe-detail--left']",XPATH,"Recipe Details Page - Ingridients Page"),
 	preparationSection("recipe-detail-directions-section",ID,"Recipe Details Page - Preparation Section"),
 	btnSendListEmail("//a[@class='button button--secondary open-modal-form']",XPATH,"Recipe Details Page - Send List Email Button"),
+	btnSendListEmail_STG("//a[text()='Send list to email']",XPATH,"Recipe Details Page - Send List Email Button"),
 	
 	// send List Email pop up
 	popUpTextHeader("ingredients-email-header",ID,"Recipe Details Page - Text on pop up -Please enter an email address to send the ingredients list. "),
@@ -354,7 +356,7 @@ public enum HomePageObjects implements PageObjects {
 		drpDownRecommendedHowToPage("//div[@class='select-dropdown__title toolbar-sorter__options']",XPATH,"How to Page - Recommended Drop Down"),
 		HowtoList("//div[@class='container cards__container']/a",XPATH,"HowTo Page - Recipes "),
 		HowToListNames("//div[@class='container cards__container']/a/div[1]/span/span",XPATH,"HowTo Page - How To List Names"),
-		labelHowToName("//section[@class='howto-detail-card howto-detail-card--simple']/h1",XPATH,"Recipe Page - Recipe"),
+		labelHowToName("(//h1)[1]",XPATH,"Recipe Page - Recipe"),
 		btnLoadMoreHowToPage("ctm-loadmore-button",ID,"Recipe Page - Load More Button"),
 		iconAdditonalHowToPage("//div[@class='icon--container']",XPATH,"Recipe Listing Page - Additional icon"),
 		
