@@ -1,8 +1,5 @@
 package componentgroups;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -1669,8 +1666,12 @@ public class CommonFunctions extends ReusableLibrary {
 	}
 	
 	public void hitEnterKey(WebElement ele, String objectName) {
-		
-		//ele.sendKeys(Keys.ENTER);
+		int i=1;
+		ele.sendKeys(Keys.ENTER);
+		while(ele.isDisplayed() && i<4) {
+	
+			ele.sendKeys(Keys.ENTER);
+		}
 		//ele.sendKeys(Keys.RETURN);
 		Actions action = new Actions(driver.getWebDriver());
 		action.sendKeys(Keys.RETURN);
