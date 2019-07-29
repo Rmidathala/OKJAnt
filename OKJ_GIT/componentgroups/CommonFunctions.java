@@ -1671,6 +1671,7 @@ public class CommonFunctions extends ReusableLibrary {
 		while(ele.isDisplayed() && i<4) {
 	
 			ele.sendKeys(Keys.ENTER);
+			i++;
 		}
 		//ele.sendKeys(Keys.RETURN);
 		Actions action = new Actions(driver.getWebDriver());
