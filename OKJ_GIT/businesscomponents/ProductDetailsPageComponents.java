@@ -124,7 +124,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeaturesAndSpecifications), ProductDetailsPageObjects.lblFeaturesAndSpecifications.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeatures), ProductDetailsPageObjects.lblFeatures.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblSpecifiations), ProductDetailsPageObjects.lblSpecifiations.getObjectname());
+			//commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblSpecifiations), ProductDetailsPageObjects.lblSpecifiations.getObjectname());
 			
 		
 		}catch(Exception e) {
@@ -178,7 +178,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	
 	public void updateQuantityInProductDetailsPage() {
 		try {
-			commonFunction.clearAndEnterText(getPageElement(ProductDetailsPageObjects.txtBoxQuantity), "4", ProductDetailsPageObjects.txtBoxQuantity.getObjectname());
+			commonFunction.selectAnyElement(getPageElement(ProductDetailsPageObjects.txtBoxQuantity), "4", ProductDetailsPageObjects.txtBoxQuantity.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnUpdateCart), ProductDetailsPageObjects.btnUpdateCart.getObjectname());
 						
 		}catch(Exception e) {

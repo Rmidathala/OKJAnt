@@ -1666,17 +1666,11 @@ public class CommonFunctions extends ReusableLibrary {
 	}
 	
 	public void hitEnterKey(WebElement ele, String objectName) {
-		int i=1;
 		ele.sendKeys(Keys.ENTER);
-		while(ele.isDisplayed() && i<4) {
-	
-			ele.sendKeys(Keys.ENTER);
-			i++;
-		}
-		//ele.sendKeys(Keys.RETURN);
-		Actions action = new Actions(driver.getWebDriver());
-		action.sendKeys(Keys.RETURN);
-		action.build().perform();
+		  Actions action
+		  = new Actions(driver.getWebDriver()); action.sendKeys(Keys.RETURN);
+		  action.build().perform();
+		 
 		report.updateTestLog("Hit enter on the Text Box"+objectName, "Enter Key was hit successfully", Status.DONE);
 		
 	}

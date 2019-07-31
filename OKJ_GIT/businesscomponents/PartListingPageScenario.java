@@ -131,18 +131,26 @@ public class PartListingPageScenario extends ReusableLibrary {
 			String partCompatibleMsg = dataTable.getData("General_Data","CompatibleSuccessMsg");
 			String partNotCompatibleMsg = dataTable.getData("General_Data","CompatibleFailMsg");
 			String partNotFoundMsg = dataTable.getData("General_Data","PartNotFoundMsg");
-			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel), productModelNumber1, PartListingPageObjects.txtBoxModel.getObjectname());
+			commonFunction.clearAndEnterTextTabOut(getPageElement(PartListingPageObjects.txtBoxModel), productModelNumber1, PartListingPageObjects.txtBoxModel.getObjectname());
 			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
 			Thread.sleep(2000);
 			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtItsCompatileMsg), PartListingPageObjects.txtItsCompatileMsg.getObjectname(), partCompatibleMsg);
 			
 			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel),productModelNumber2, PartListingPageObjects.txtBoxModel.getObjectname());
 			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
+			if(!commonFunction.getTextFromTextBox(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname()).equals(productModelNumber2)) {
+				commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel),productModelNumber2, PartListingPageObjects.txtBoxModel.getObjectname());
+			}
+			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
 			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtItsNotCompatibleMsg), PartListingPageObjects.txtItsNotCompatibleMsg.getObjectname(), partNotCompatibleMsg);
 			
-			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname(), "1234");
+			commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel), "1234",PartListingPageObjects.txtBoxModel.getObjectname() );
 			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
-			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtNoMatchingProduct),partNotFoundMsg, PartListingPageObjects.txtNoMatchingProduct.getObjectname());
+			if(!commonFunction.getTextFromTextBox(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname()).equals("1234")) {
+				commonFunction.clearAndEnterText(getPageElement(PartListingPageObjects.txtBoxModel),"1234", PartListingPageObjects.txtBoxModel.getObjectname());
+			}
+			commonFunction.hitEnterKey(getPageElement(PartListingPageObjects.txtBoxModel), PartListingPageObjects.txtBoxModel.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtNoMatchingProduct), PartListingPageObjects.txtNoMatchingProduct.getObjectname(),partNotFoundMsg);
 			commonFunction.isElementPresentContainsText(getPageElement(PartListingPageObjects.txtItsNotCompatibleMsg), PartListingPageObjects.txtItsNotCompatibleMsg.getObjectname(), partNotCompatibleMsg);
 			
 		}catch(Exception e) {

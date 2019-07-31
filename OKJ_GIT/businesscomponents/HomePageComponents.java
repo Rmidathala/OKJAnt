@@ -1967,6 +1967,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 	public void navigateToProductRegitrationPage() {
 		try {
+			Thread.sleep(4000);
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
 					HomePageObjects.btnUserAccount.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkRegisteredProductsLoggedIn),

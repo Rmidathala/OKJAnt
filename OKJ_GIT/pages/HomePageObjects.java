@@ -93,10 +93,10 @@ public enum HomePageObjects implements PageObjects {
 	txtSubMenuHowToPageDescription("//div[@class='category-description']/p",XPATH,"How-To's- Sub Menu Page Description of Menu The Craft"),
 	
 	//Search Button
-	btnSearch("//button[@id='searchButton']",XPATH,"Search Button on Home Page"),
+	btnSearch("//button[@id='searchButton']/i",XPATH,"Search Button on Home Page"),
 	
 	//Search Textbox
-	txtBoxSearch("//input[@id='search']",XPATH,"Search Text box"),
+	txtBoxSearch("search",ID,"Search Text box"),
 	
 	// Search Results
 	txtSearchResults("//h1[@class='search__title__container search__title']",XPATH,"Search Text - Results"),

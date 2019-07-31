@@ -196,7 +196,7 @@ public class ProductRegistrationPageComponents extends ReusableLibrary {
 			commonFunction.clearAndEnterText(getPageElement(ProductRegistrationPageObjects.txtBoxPhoneNumber), phoneNumber,ProductRegistrationPageObjects.txtBoxPhoneNumber.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(ProductRegistrationPageObjects.txtBoxModelNumber), modelNumber,ProductRegistrationPageObjects.txtBoxModelNumber.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(ProductRegistrationPageObjects.txtBoxPurchaseAmt), purchaseAmt,ProductRegistrationPageObjects.txtBoxPurchaseAmt.getObjectname());
-			commonFunction.clearAndEnterText(getPageElement(ProductRegistrationPageObjects.txtBoxPurchaseDate), purchaseDte,ProductRegistrationPageObjects.txtBoxPurchaseDate.getObjectname());
+			commonFunction.clearAndEnterTextTabOut(getPageElement(ProductRegistrationPageObjects.txtBoxPurchaseDate), purchaseDte,ProductRegistrationPageObjects.txtBoxPurchaseDate.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(ProductRegistrationPageObjects.txtBoxSerialNumber), serialNbr,ProductRegistrationPageObjects.txtBoxSerialNumber.getObjectname());
 			commonFunction.selectDropDownvalue(getPageElement(ProductRegistrationPageObjects.lnkPurchaseLocation),ProductRegistrationPageObjects.drpDownPurchaseLocation.getProperty(),ProductRegistrationPageObjects.drpDownPurchaseLocation.getObjectname(),purchaseLocation);
 			commonFunction.clickIfElementPresent(getPageElement(ProductRegistrationPageObjects.checkBoxGetRecipes), ProductRegistrationPageObjects.checkBoxGetRecipes.getObjectname());

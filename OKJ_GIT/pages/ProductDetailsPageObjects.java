@@ -51,7 +51,7 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblOnlineSeller("//div[@class='ps-online-seller-listings ps-float-box']/div[1]",XPATH,"Online Seller list- First Online Store"),
 	btnCloseWhereToBuyOverlay("//div[@class='ps-header-container ps-float-box']/div[@class='ps-lightbox-close']",XPATH,"Close the where to buy Overlay Button"),
 	btnLocationSearch("//div[@class='ps-mag-icon ps-map-location-button']",XPATH,"Location Search Button"),
-	txtBoxQuantity("//input[@id='qty']",XPATH,"Quantity on Product Details Page"),
+	txtBoxQuantity("//select[@id='qty']",XPATH,"Quantity on Product Details Page"),
 	btnUpdateCart("//button[@title='Update Cart']/span",XPATH,"Update Cart Button on Product Details"),
 	
 	
