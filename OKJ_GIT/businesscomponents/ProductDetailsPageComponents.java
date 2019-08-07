@@ -123,8 +123,8 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgCookingArea), ProductDetailsPageObjects.imgCookingArea.getObjectname());
 			
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeaturesAndSpecifications), ProductDetailsPageObjects.lblFeaturesAndSpecifications.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeatures), ProductDetailsPageObjects.lblFeatures.getObjectname());
-			//commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblSpecifiations), ProductDetailsPageObjects.lblSpecifiations.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblFeatures_STG), ProductDetailsPageObjects.lblFeatures_STG.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblSpecifiations_STG), ProductDetailsPageObjects.lblSpecifiations_STG.getObjectname());
 			
 		
 		}catch(Exception e) {
@@ -190,6 +190,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	public void addProductToCart() {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
+			Thread.sleep(5000);
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			
 		}catch(Exception e) {

@@ -1404,6 +1404,12 @@ public class HomePageComponents extends ReusableLibrary {
 			} else {
 				report.updateTestLog("Verify user is Logged In", "User is NOT logged in", Status.FAIL);
 			}
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
+						HomePageObjects.btnUserAccount.getObjectname());
+			}
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.headerLogo),
 					HomePageObjects.headerLogo.getObjectname());
 		} catch (Exception e) {
@@ -2175,7 +2181,8 @@ public class HomePageComponents extends ReusableLibrary {
 			report.updateTestLog("Validate Forgot Password page", "Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
-
+	
+	
 	public void validateNavigationToSignUpPageFromSignInModel() {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),

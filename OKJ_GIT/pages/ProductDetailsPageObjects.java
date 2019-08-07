@@ -33,6 +33,9 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblFeatures("//a[@class='product-features__title']/h4[@id='tab-label-features']",XPATH,"Features heading"),
 	lblSpecifiations("//a[@class='product-features__title']/h4[@id='tab-label-additional']",XPATH,"Specifications Heading"),
 	
+	lblFeatures_STG("(//a[@class='product-features__title']/h4)[1]",XPATH,"Features heading"),
+	lblSpecifiations_STG("(//a[@class='product-features__title']/h4)[3]",XPATH,"Specifications Heading"),
+	
 	// Item Added to your cart overlay
 	lblItemAddedToYourCartTitle("//div[@class='minicart__block-title']/span",XPATH,"Item Added to Your Cart Title on the model overlay"),
 	imgProductImageOnOverlay("//div[@class='minicart__block-title']/following::a[1]",XPATH,"Product Image on the 'Item added to your cart' model overlay"),

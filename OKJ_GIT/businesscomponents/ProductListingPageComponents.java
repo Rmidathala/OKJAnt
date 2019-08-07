@@ -79,7 +79,62 @@ public class ProductListingPageComponents extends ReusableLibrary {
 					Status.FAIL);
 		}
 	}
+	public void validateTipsFilterHowToPage() {
+		try {
+			// Scroll to filter and click on filter
+			commonFunction.scrollIntoView(getPageElement(ProductListingPageObjects.btnFilterHowToPage));
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnFilterHowToPage),
+					ProductListingPageObjects.btnFilterHowToPage.getObjectname());
 
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.expandCateoryHowToPage),
+					ProductListingPageObjects.expandCateoryHowToPage.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.checkBoxFoodHowTo),
+					ProductListingPageObjects.checkBoxFoodHowTo.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnApplyHowToPage),
+					ProductListingPageObjects.btnApplyHowToPage.getObjectname());
+
+			if (commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.itmFirstProductHowToPage),
+					ProductListingPageObjects.itmFirstProductHowToPage.getObjectname())) {
+				report.updateTestLog("Verify tips displayed after applying Category filter",
+						"The filtered tips are displayed after the applying the Category filter", Status.PASS);
+			} else {
+				report.updateTestLog("Verify tips displayed after applying Category filter",
+						"The filtered tips are NOT displayed after the applying the Category filter", Status.FAIL);
+			}
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnFilterHowToPage),
+					ProductListingPageObjects.btnFilterHowToPage.getObjectname());
+			
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.lnkclearAllFilters),
+					ProductListingPageObjects.lnkclearAllFilters.getObjectname());
+						
+
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnFilterHowToPage),
+					ProductListingPageObjects.btnFilterHowToPage.getObjectname());
+
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.expandDifficultyHowToPage),
+					ProductListingPageObjects.expandDifficultyHowToPage.getObjectname());
+
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.checkBoxBeginner),
+					ProductListingPageObjects.checkBoxBeginner.getObjectname());
+
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnApplyHowToPage),
+					ProductListingPageObjects.btnApplyHowToPage.getObjectname());
+
+			if (commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.itmFirstProductHowToPage),
+					ProductListingPageObjects.itmFirstProductHowToPage.getObjectname())) {
+				report.updateTestLog("Verify tips displayed after applying Difficulty filter",
+						"The filtered tips are displayed after the applying the Difficulty filter",
+						Status.PASS);
+			} else {
+				report.updateTestLog("Verify Products displayed after applying Difficulty filter",
+						"The filtered tips are NOT displayed after the applying the Difficulty filter",
+						Status.FAIL);
+			}
+		} catch (Exception e) {
+			report.updateTestLog("How To Page- Filter products -  Validation",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
 	public void validateProductFilter() {
 		try {
 			// Scroll to filter and click on filter
@@ -130,6 +185,20 @@ public class ProductListingPageComponents extends ReusableLibrary {
 			}
 		} catch (Exception e) {
 			report.updateTestLog("Product Listing Page - Filter products -  Validation",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
+	public void validateProductSort() {
+		try {
+			commonFunction.scrollIntoView(getPageElement(ProductListingPageObjects.lnkSortdropDown));
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.lnkSortdropDown),
+					ProductListingPageObjects.lnkSortdropDown.getObjectname());
+			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.optionDropDownProductName),
+					ProductListingPageObjects.optionDropDownProductName.getObjectname());
+
+		}catch(Exception e) {
+			report.updateTestLog("Product Listing Page - Sort products -  Validation",
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}

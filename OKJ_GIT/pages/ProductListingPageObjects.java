@@ -36,6 +36,20 @@ public enum ProductListingPageObjects implements PageObjects {
 	//Filter section
 	lnkCancel("//div[@class='toolbar-filter__top--cancel']",XPATH,"Product Filter section: Cancel Link"),
 	
+	// Sort
+	lnkSortdropDown("custom-sorter",ID,"Product sort Section -- Sort Link"),
+	optionDropDownProductName("//div[@id='custom-sorter']/ul/li[2]",XPATH,"Product Sort Section - Product Name"),
+	
+	
+	// How to Filter
+	btnFilterHowToPage("//div[@id='layered-filter-block']/div/span",XPATH,"How to Page - Filter drop down"),
+	expandCateoryHowToPage("//div[@class='toolbar-filter__title']/span[text()='Category']",XPATH,"How to Page - Category Option"),
+	checkBoxFoodHowTo("(//span[@class='filter-list__link']/span[1])[1]",XPATH,"How To Page - checkbox - Food How To"),
+	expandDifficultyHowToPage("//div[@class='toolbar-filter__title']/span[text()='Difficulty']",XPATH,"How to Page - Difficulty Option"),
+	checkBoxBeginner("(//span[@class='filter-list__link']/span[1])[2]",XPATH,"How To Page - Checkbox - Beginner"),
+	btnApplyHowToPage("//div[@class='toolbar-filter__top--apply']",XPATH,"How To Page - Filter - apply btn"),
+	lnkclearAllFilters("//div[@class='filter-current__remove-all']/a",XPATH,"How To Page - Filter - Clear All Filters Link"),
+	itmFirstProductHowToPage("//div[@class='container cards__container']/a[1]",XPATH,"How to Page - First Product"),
 	;
 
 	String strProperty = "";
