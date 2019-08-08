@@ -13,7 +13,7 @@ public enum FAQPageObjects implements PageObjects {
 	
 	// Most Popular
 	subTitleMostPopular("//div[@id='accordion__most_popular']/div[1]",XPATH,"FAQ Page - Label - Most Popular"),
-	lblHowDoISeasonMySmoker("accordion-title-how-do-i-season-my-smoker",ID,"FAQ Page - Sub Label - How do I Season My Somker"),
+	lblHowDoISeasonMySmoker("accordion-title-how-do-i-season-my-smoker-1",ID,"FAQ Page - Sub Label - How do I Season My Somker"),
 	txtHowDoISeasonMySmoker("//div[@id='accordion__most_popular']/div[2]/div[2]",XPATH,"FAQ Page Paragraph for - How Do I Season My Smoker"),
 	
 	lblMaterialOKJSmokersMadeOf_STG("accordion-title-smoker-materials",ID,"FAQ Page - Sub Lable - What material are OKJ smokers made of?"),
@@ -23,19 +23,19 @@ public enum FAQPageObjects implements PageObjects {
 	
 	//Product
 	subTitleProduct("//div[@id='accordion__product']/div[1]",XPATH,"FAQ Page - Label- Product"),
-	lblHowDoICleanGrates("accordion-title-clean-grates",ID,"FAQ Page - Sub Label - How Do I Clean Grates"),
+	lblHowDoICleanGrates("accordion-title-clean-grates-2",ID,"FAQ Page - Sub Label - How Do I Clean Grates"),
 	txtHowDoICleanGrates("//div[@id='accordion__product']/div[2]/div[2]",XPATH,"FAQ Page - Paragraph for - How Do I Clean Grates "),
 	
 	lblKindOfWoolUsed_STG("accordion-title-types-of-wood-product-section",ID,"FAQ Page - Sub Label - What kind of wood can I use? (Product Section)"),
 	txtKindOfWoolUsed_STG("//div[@id='accordion__product']/div[2]/div[2]",XPATH,"FAQ Page - Paragraph for - What kind of wood can I use? (Product Section)"),
 	
 	
-	lblHowDoIMaintainMySmoker("accordion-title-maintain-smoker",ID,"FAQ Page - Sub Label under Product - How Do I Maintain My Smoker"),
+	lblHowDoIMaintainMySmoker("accordion-title-maintain-smoker-3",ID,"FAQ Page - Sub Label under Product - How Do I Maintain My Smoker"),
 	txtHowDoIMaintainMySmoker("//div[@id='accordion__product']/div[3]/div[2]",XPATH,"FAQ Page - Paragrph for Product - How Do I Maintain My Smoker"),
 	
 	//Smoking Technique
 	subTitleSmokingTechnique("//div[@id='accordion__smoking_technique']/div[1]",XPATH,"FAQ  Page - Label - Smoking Technique"),
-	lblHowDoIBuildAFireInTheFirefox("accordion-title-build-a-fire-in-the-firebox",ID,"FAQ Page - Sub Label - How Do I Build A Fire in the Firefox"),
+	lblHowDoIBuildAFireInTheFirefox("accordion-title-build-a-fire-in-the-firebox-4",ID,"FAQ Page - Sub Label - How Do I Build A Fire in the Firefox"),
 	txtHowDoIBuildAFireInTheFirefox("//div[@id='accordion__smoking_technique']/div[2]/div[2]",XPATH,"FAQ Page - Paragraph for Smoking Technique - How Do I Build a Fire in the Firefox"),
 	
 	// More from the Craft section

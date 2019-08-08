@@ -30,8 +30,8 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	imgCookingArea("//div[@class='dimensions--right']",XPATH,"Cooking Area Details of the Product"),
 	
 	lblFeaturesAndSpecifications("//h2[@class='product-features__heading text-center text-charcoal bg-white']",XPATH,"Fetuares and Specifiations label"),
-	lblFeatures("//a[@class='product-features__title']/h4[@id='tab-label-features']",XPATH,"Features heading"),
-	lblSpecifiations("//a[@class='product-features__title']/h4[@id='tab-label-additional']",XPATH,"Specifications Heading"),
+	lblFeatures("(//a[@class='product-features__title']/h4)[1]",XPATH,"Features heading"),
+	lblSpecifiations("(//a[@class='product-features__title']/h4)[3]",XPATH,"Specifications Heading"),
 	
 	lblFeatures_STG("(//a[@class='product-features__title']/h4)[1]",XPATH,"Features heading"),
 	lblSpecifiations_STG("(//a[@class='product-features__title']/h4)[3]",XPATH,"Specifications Heading"),

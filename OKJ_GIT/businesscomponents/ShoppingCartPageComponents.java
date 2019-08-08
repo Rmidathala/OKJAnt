@@ -272,6 +272,9 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 						"The user is not navigated to Paypal Page.",
 						Status.FAIL);
 			}
+			Thread.sleep(5000);
+			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.btnCreatePaypalAccount),
+					ShoppingCartPageObjects.btnCreatePaypalAccount.getObjectname());
 		}catch(Exception e) {
 			report.updateTestLog("Shipping Cart -  Navigate to Paypal",
 					"Something went wrong!" + e.toString(), Status.FAIL);

@@ -242,8 +242,8 @@ public class ProductListingPageComponents extends ReusableLibrary {
 					ProductListingPageObjects.expandPrice.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.lnkCancel),
 					ProductListingPageObjects.lnkCancel.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.btnApply),
-					ProductListingPageObjects.btnApply.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.btnApplyDisabled),
+					ProductListingPageObjects.btnApplyDisabled.getObjectname());
 		}catch(Exception e) {
 			report.updateTestLog("Product Listing Page - validate Filter Section",
 					"Something went wrong!" + e.toString(), Status.FAIL);

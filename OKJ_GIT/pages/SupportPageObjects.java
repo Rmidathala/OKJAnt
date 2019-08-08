@@ -21,7 +21,7 @@ public enum SupportPageObjects implements PageObjects {
 	
 	//FAQ
 	titleFAQ("//div[@class='accordion__heading']",XPATH,"Product Support Page - FAQ section - Title FAQ "),
-	subtitleHowDoISeasonMySmoker("accordion-title-how-do-i-season-my-smoker",ID,"Product Support Page - FAQ Section - Subtitle - How Do I Season My Smoker"),
+	subtitleHowDoISeasonMySmoker("accordion-title-how-do-i-season-my-smoker-1",ID,"Product Support Page - FAQ Section - Subtitle - How Do I Season My Smoker"),
 	descForHowDoISeasonMySmoker("//div[@class='accordion__content']",XPATH,"Product Support Page - FAQ Section - Description for How Do I Season My Smoker"),
 	lnkViewAllFAQs("//a[text()='View All FAQs']",XPATH,"Product Support Page - FAQ Section - View All FAQs Link"),
 	

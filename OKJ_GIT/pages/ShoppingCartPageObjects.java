@@ -30,6 +30,7 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	btnCheckout("//button[@class='button button--full-width']",XPATH,"Checkout button on Shopping Cart Page"),
 	btnPayPal("//ul[@class='cart-summary__methods']/li/div/a",XPATH,"Paypal Button"),
 	
+	btnCreatePaypalAccount("//a[@id='createAccount']",XPATH,"Paypal Page - Create Account Button"),
 	txtUpdateMessageFromPDP("//div[@data-bind='html: message.text']",XPATH,"Message after updating Product from Product Details Page"),
 	
 	//Empty Shipping cart
@@ -45,7 +46,7 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	lnkLiveChat("//a[@class='support-summary-cart__contact__chat link link--with-carat']",XPATH,"Support Section - link for Live Chat"),
 	
 	//Paypal page
-	iconCharbroiIcon("//div[@class='headerWrapper']/img",XPATH,"Pay Pal Page- Charbroil Icon"),
+	iconCharbroiIcon("(//div[@class='headerWrapper']/img)[1]",XPATH,"Pay Pal Page- Charbroil Icon"),
 	amtTotalAmount("//format-currency[@class='formatCurrency ng-isolate-scope']/span",XPATH,"Pay Pal Page - Total Amount in $"),
 	//Staging paypal
 	iconPaypal("//div[@id='content']/header/p",XPATH,"Pay Pal Logo - Paypal page"),

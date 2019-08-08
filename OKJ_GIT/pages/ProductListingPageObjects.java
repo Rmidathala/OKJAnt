@@ -32,7 +32,7 @@ public enum ProductListingPageObjects implements PageObjects {
 	firstPriceOption("//span[@class='toolbar-filter--span' and text()='Price']/following::span[2]",XPATH,"First Option under the Price filter"),
 	
 	btnApply("//div[@class='toolbar-filter__top--apply']",XPATH,"Apply Button in filter"),
-	
+	btnApplyDisabled("//div[@class='toolbar-filter__top--apply disabled']",XPATH,"Apply Button in Filter"),
 	//Filter section
 	lnkCancel("//div[@class='toolbar-filter__top--cancel']",XPATH,"Product Filter section: Cancel Link"),
 	

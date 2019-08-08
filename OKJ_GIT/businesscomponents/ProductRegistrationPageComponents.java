@@ -201,6 +201,7 @@ public class ProductRegistrationPageComponents extends ReusableLibrary {
 			commonFunction.selectDropDownvalue(getPageElement(ProductRegistrationPageObjects.lnkPurchaseLocation),ProductRegistrationPageObjects.drpDownPurchaseLocation.getProperty(),ProductRegistrationPageObjects.drpDownPurchaseLocation.getObjectname(),purchaseLocation);
 			commonFunction.clickIfElementPresent(getPageElement(ProductRegistrationPageObjects.checkBoxGetRecipes), ProductRegistrationPageObjects.checkBoxGetRecipes.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(ProductRegistrationPageObjects.btnRegisterProduct), ProductRegistrationPageObjects.btnRegisterProduct.getObjectname());
+			Thread.sleep(5000);
 			if(commonFunction.isElementPresentContainsText(getPageElement(ProductRegistrationPageObjects.msgThankYou), ProductRegistrationPageObjects.msgThankYou.getObjectname(), "Thank You. Your product has been registered.")){
 				report.updateTestLog("Product Registration",
 						"Product is successfully Registered", Status.PASS);
