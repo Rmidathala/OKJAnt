@@ -2,6 +2,7 @@ package businesscomponents;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import supportlibraries.ReusableLibrary;
@@ -195,7 +196,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			
 			ProductDetailsPageComponents pdp = new ProductDetailsPageComponents(scriptHelper);
 			pdp.updateQuantityInProductDetailsPage();
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			commonFunction.isElementPresentContainsText(getPageElement(ShoppingCartPageObjects.txtUpdateMessageFromPDP), ShoppingCartPageObjects.txtUpdateMessageFromPDP.getObjectname(), "was updated in your shopping cart.");
 			Double totalValueAfterQuantityChange = Double.parseDouble(commonFunction.getTextFromElement(getPageElement(ShoppingCartPageObjects.txtTotalPrice)).substring(1).replace(",", ""));
 			int quantityAfterEdit = Integer.parseInt(commonFunction.getSelectedTextFromDropDown(getPageElement(ShoppingCartPageObjects.drpDownQuantity)));
@@ -345,8 +346,10 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkGoBack),
 					ShoppingCartPageObjects.lnkGoBack.getObjectname());
-			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkGoBack),
-					ShoppingCartPageObjects.lnkGoBack.getObjectname());
+			if(!webdriverutil.objectExists(By.xpath(ShoppingCartPageObjects.lnkGoBack.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkGoBack),
+						ShoppingCartPageObjects.lnkGoBack.getObjectname());
+			}
 			if(commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname())) {
 				report.updateTestLog("Verify user navigated back to product details page on clicking Go back link in Empty Shipping Page",
 						"User is successfully navigated back to product details page",

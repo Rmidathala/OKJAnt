@@ -291,6 +291,7 @@ public class HomePageComponents extends ReusableLibrary {
 			}
 
 			// Validate Sub Menu Smokers/Grill Combos in Smokers & Grills
+			Thread.sleep(10000);
 			commonFunction.moveToAnElement(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuSmokerGrillCombo),
@@ -306,6 +307,7 @@ public class HomePageComponents extends ReusableLibrary {
 			}
 
 			// Validate Sub Menu Charcoal Grills in Smokers & Grills
+			Thread.sleep(10000);
 			commonFunction.moveToAnElement(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkSubMenuCharCoalGrill),
@@ -557,7 +559,10 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.txtBoxPartSearch.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtPartContactService),
 					HomePageObjects.txtPartContactService.getObjectname());
-
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 			// Validate Support in Footer
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblSupport),
 					HomePageObjects.lblSupport.getObjectname());
@@ -578,10 +583,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lblMonToFri.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSendEmail),
 					HomePageObjects.lnkSendEmail.getObjectname());
-			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
-				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
-						HomePageObjects.btnClosePopUp.getObjectname());
-			}
+			
 			if (liveTime.getHour() < 9 & liveTime.getHour() > 21) {
 				commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblChatBusinessHour),
 						HomePageObjects.lblChatBusinessHour.getObjectname());
@@ -601,8 +603,10 @@ public class HomePageComponents extends ReusableLibrary {
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxPartSearch), partModel,
 					HomePageObjects.txtBoxPartSearch.getObjectname());
 			Thread.sleep(2000);
-			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.PartsSearchList),
-					HomePageObjects.PartsSearchList.getObjectname());
+			/*
+			 * commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.
+			 * PartsSearchList), HomePageObjects.PartsSearchList.getObjectname());
+			 */
 			commonFunction.hitEnterKey(getPageElement(HomePageObjects.txtBoxPartSearch),
 					HomePageObjects.txtBoxPartSearch.getObjectname());
 			if (driver.getCurrentUrl().contains("/parts/search/results/?model=" + partModel)) {

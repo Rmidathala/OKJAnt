@@ -167,7 +167,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnLocationSearch), ProductDetailsPageObjects.txtBoxLocationAddress.getObjectname());
 
 			//commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.imgMapOnWhereToBuy), ProductDetailsPageObjects.imgMapOnWhereToBuy.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblOnlineSeller), ProductDetailsPageObjects.lblOnlineSeller.getObjectname());
+			//commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblOnlineSeller), ProductDetailsPageObjects.lblOnlineSeller.getObjectname());
 			
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCloseWhereToBuyOverlay), ProductDetailsPageObjects.btnCloseWhereToBuyOverlay.getObjectname());
 		}catch(Exception e) {

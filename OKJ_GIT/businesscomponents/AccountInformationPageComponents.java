@@ -111,7 +111,10 @@ public class AccountInformationPageComponents extends ReusableLibrary {
 		String state = dataTable.getData("General_Data","State");
 		String zip = dataTable.getData("General_Data","ZipCode");
 		
-		commonFunction.clickIfElementPresent(getPageElement(AccountInformationPageObjects.lnkAddNewAddress), AccountInformationPageObjects.lnkAddNewAddress.getObjectname());
+		if(!webdriverutil.objectExists(By.xpath(AccountInformationPageObjects.lnkAddNewAddress.getProperty()))) {
+			commonFunction.clickIfElementPresent(getPageElement(AccountInformationPageObjects.lnkAddNewAddress), AccountInformationPageObjects.lnkAddNewAddress.getObjectname());
+		}
+		
 		if(commonFunction.verifyIfElementIsPresent(getPageElement(AccountInformationPageObjects.lblAddNewAddress), AccountInformationPageObjects.lblAddNewAddress.getObjectname())) {
 			report.updateTestLog("Verify user navigated to Add Address Page", "User is successfully Navigated to Add Address Page", Status.PASS);
 		} else {
