@@ -3,6 +3,7 @@ package businesscomponents;
 import java.time.LocalTime;
 import java.time.ZoneId;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import supportlibraries.ReusableLibrary;
@@ -220,6 +221,9 @@ public class SupportPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(SupportPageObjects.helpTextProductSearch), SupportPageObjects.helpTextProductSearch.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(SupportPageObjects.txtBoxEnterProductModelNumber), productModel, SupportPageObjects.txtBoxEnterProductModelNumber.getObjectname());
 			commonFunction.hitEnterKey(getPageElement(SupportPageObjects.txtBoxEnterProductModelNumber), SupportPageObjects.txtBoxEnterProductModelNumber.getObjectname());
+			if(webdriverutil.objectExists(By.xpath(SupportPageObjects.txtBoxEnterProductModelNumber.getProperty()))) {
+				commonFunction.hitEnterKey(getPageElement(SupportPageObjects.txtBoxEnterProductModelNumber), SupportPageObjects.txtBoxEnterProductModelNumber.getObjectname());
+			}
 			if(driver.getCurrentUrl().contains("/parts/search/results/?model="+productModel)) {
 				report.updateTestLog("Verify Part Listing Page from Footer", "User is successfully navigated to Part Listing page", Status.PASS);
 			}else {
