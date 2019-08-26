@@ -346,7 +346,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkGoBack),
 					ShoppingCartPageObjects.lnkGoBack.getObjectname());
-			if(!webdriverutil.objectExists(By.xpath(ShoppingCartPageObjects.lnkGoBack.getProperty()))) {
+			if(webdriverutil.objectExists(By.xpath(ShoppingCartPageObjects.lnkGoBack.getProperty()))) {
 				commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.lnkGoBack),
 						ShoppingCartPageObjects.lnkGoBack.getObjectname());
 			}

@@ -1400,6 +1400,12 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnSignInModelOverlay),
 					HomePageObjects.btnSignInModelOverlay.getObjectname());
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnUserAccount),
+						HomePageObjects.btnUserAccount.getObjectname());
+			}
 			if (commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSignOut),
 					HomePageObjects.lnkSignOut.getObjectname())) {
 
@@ -2173,12 +2179,14 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.txtEnterEmailaddrs.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtBoxForgotPwdEmail),
 					HomePageObjects.txtBoxForgotPwdEmail.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtBoxCaptcha),
-					HomePageObjects.txtBoxCaptcha.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.imgCaptcha),
-					HomePageObjects.imgCaptcha.getObjectname());
-			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.btnReloadCaptcha),
-					HomePageObjects.btnReloadCaptcha.getObjectname());
+			/*
+			 * commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.
+			 * txtBoxCaptcha), HomePageObjects.txtBoxCaptcha.getObjectname());
+			 * commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.
+			 * imgCaptcha), HomePageObjects.imgCaptcha.getObjectname());
+			 * commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.
+			 * btnReloadCaptcha), HomePageObjects.btnReloadCaptcha.getObjectname());
+			 */
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.btnResetMyPassword),
 					HomePageObjects.btnResetMyPassword.getObjectname());
 		} catch (Exception e) {
