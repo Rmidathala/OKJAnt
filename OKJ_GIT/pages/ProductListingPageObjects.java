@@ -19,7 +19,7 @@ public enum ProductListingPageObjects implements PageObjects {
 	firstProdcutPrice("//div[@class='product-listing__list slider']/a[1]/div/div[2]/div/span/span",XPATH,"First Product Price"),
 	firstProuctStars("(//span[@class='bv_stars_svg_no_wrap'])[1]",XPATH,"First Product star rating"),
 	productsOnProuctListingPage("//div[@class='product-listing__list slider']/a",XPATH,"Products on Product listing Page"),
-	firstProductImg("//div[@class='product-listing__list slider']/a[1]/div/div[1]/img",XPATH,"First Product Image"),
+	firstProductImg("//div[@class='product-listing__list slider']/a[1]/div/div[1]/span/span/img",XPATH,"First Product Image"),
 	btnLoadMore("//a[@class='button button--center']",XPATH,"Load More Button"),
 	
 	expandColor("//span[@class='toolbar-filter--span' and text()='Color']",XPATH,"Expand Color Filter Options"),

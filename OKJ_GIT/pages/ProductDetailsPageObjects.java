@@ -23,7 +23,7 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	txtProductInfoOverview_STG("//div[@class='body-copy product-info__overview']/div",XPATH,"Product Info Overview"),
 	
 	videoProduct("//div[@class='video-product']",XPATH,"Product video"),
-	imgCloserLook("//div[@class='closer-look__button slick-slide slick-current slick-active']/img",XPATH,"Closer Look image of the product"),
+	imgCloserLook("//div[@class='closer-look__button']/img",XPATH,"Closer Look image of the product"),
 	slidRightCloserLook("//div[@class='closer-look__nav-arrow closer-look__arrow-next slick-arrow']",XPATH,"Slide images right - Closer Look images"),
 	
 	imgDimensions("//div[@class='dimensions--left']",XPATH,"Dimensions details of the product"),
