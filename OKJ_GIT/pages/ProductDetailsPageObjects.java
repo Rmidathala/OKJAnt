@@ -88,6 +88,13 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	tabCookingArea3("//ul[@class='dimensions__tabs']/a[3]",XPATH,"Product Details Page - Cooking Area - Tab 3"),
 	tabCookingArea3AdditionalText("//div[@class='dimensions__image-tabs']/div[3]/div[1]",XPATH,"Product details Page - Cooking Area- Tab 3 - Primary Cooking Space (Pictured):"),
 	
+	
+	drpDownQuantityProductDetailsPage("//select[@id='qty']",XPATH,"Product Details Page - Tired pricing - Quantity"),
+	lblMainPriceOfProduct("//span[@class='price price__price-box price-final_price tax weee']/span/span",XPATH,"Product Details Page - Main Price of the Product"),
+	
+	lblCancelledMainPriceOfProduct("//span[@class='price price__price-box price-final_price tax weee']/span/span/span",XPATH,"Product Details Page - Cancelled Main Price of the Product"),
+	lblDiscountedPriceOfProduct("//div[@class='price-box price__price-box price-final_price tier__discount']/span/span",XPATH,"Product Details Page - Discounted Price after selecting the higher quantity"),
+	lblTiredSavings("//div[@class='tier__savings']",XPATH,"Product Details Page - Tired Savings Text"),
 	;
 
 	String strProperty = "";

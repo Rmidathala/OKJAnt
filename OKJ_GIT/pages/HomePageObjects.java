@@ -374,7 +374,13 @@ public enum HomePageObjects implements PageObjects {
 		txtBoxemailHowtoPage("newsletter",ID,"How To Page - Get Recipes & Tips Delivered To Inbox Section - Email text box"),
 		btnSignMeUpHowToPage("//button[@title='SIGN ME UP']",XPATH,"How To Page - Get Recipes & Tips Delivered To Inbox Section - Sign Me Up Button"),
 		sucessSignUpHowToPage("//div[@class='newsletter__title']/h1",XPATH,"How To Page - Get Recipes & Tips Delivered to Inbox Section - Success Overlay"),
-	;
+		tagsHowToPageDetails("//div[@class='howto-detail-card__tags text-white']/a",XPATH,"How To Details page - Tags"),
+		
+		//Recipe page
+		
+		tagsRecipeDetailsPage("//div[@class='recipe-detail-card__tags text-white']/a[1]",XPATH,"Recipe Details Page- Tags link"),
+		
+		;
 	
 	
 

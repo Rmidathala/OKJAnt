@@ -323,4 +323,70 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
+	
+	public void validateTiredPricing() {
+		try {
+			
+			if(commonFunction.getSelectedTextFromDropDown(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage)).contains("1") && commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblMainPriceOfProduct), ProductDetailsPageObjects.lblMainPriceOfProduct.getObjectname())) {
+				report.updateTestLog("Verify default quantity value is 1 and default price is displayed without discount",
+						"Default quantity value is 1 and default price is displayed without discount", Status.PASS);
+				} else {
+					report.updateTestLog("Verify default quantity value is 1 and default price is displayed without discount",
+							"Default quantity value is NOT 1 or default price is displayed WITH discount", Status.FAIL);
+				}
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "2", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 2 and save 7%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "3", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 3 and save 7%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "4", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 4 and save 14%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "5", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 5 and save 14%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "6", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 6 and save 14%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "7", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 7 and save 14%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "8", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ProductDetailsPageObjects.lblTiredSavings), ProductDetailsPageObjects.lblTiredSavings.getObjectname(), "Buy 8 or more and save 21%");
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblCancelledMainPriceOfProduct), ProductDetailsPageObjects.lblCancelledMainPriceOfProduct.getObjectname());
+			commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblDiscountedPriceOfProduct), ProductDetailsPageObjects.lblDiscountedPriceOfProduct.getObjectname());
+			
+		}catch(Exception e) {
+			report.updateTestLog("Product Details Page - Cooking Area",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
+	public void selectQuantityOnPDP() {
+		try {
+			
+			commonFunction.selectAnyElementByValue(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage), "4", ProductDetailsPageObjects.drpDownQuantityProductDetailsPage.getObjectname());
+			if(commonFunction.getSelectedTextFromDropDown(getPageElement(ProductDetailsPageObjects.drpDownQuantityProductDetailsPage)).contains("4") && commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.lblMainPriceOfProduct), ProductDetailsPageObjects.lblMainPriceOfProduct.getObjectname())) {
+				report.updateTestLog("Verify quantity is selected on the Product Details Page",
+						"Product Quantity is slected on the Product Details page", Status.PASS);
+				} else {
+					report.updateTestLog("Verify quantity is selected on the Product Details Page",
+							"Product Quantity is  NOT selected on the Product Details page", Status.FAIL);
+				}
+		}catch(Exception e) {
+			report.updateTestLog("Product Details Page - Select Quantity",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
 }

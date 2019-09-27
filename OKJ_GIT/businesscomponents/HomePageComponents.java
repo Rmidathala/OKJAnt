@@ -475,7 +475,7 @@ public class HomePageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSearchResults),
 					HomePageObjects.txtSearchResults.getObjectname());
 			commonFunction.isElementPresentContainsText(getPageElement(HomePageObjects.txtSearchResults),
-					HomePageObjects.txtSearchResults.getObjectname(), "Ã¢â‚¬Å“" + searchText + "Ã¢â‚¬ï¿½");
+					HomePageObjects.txtSearchResults.getObjectname(), "“" + searchText + "”");
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblProducts),
 					HomePageObjects.lblProducts.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkRecipes),
@@ -2713,4 +2713,55 @@ public class HomePageComponents extends ReusableLibrary {
 		}
 	}
 	
+	public void validateTagsInHowToPage() {
+		try {
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.tagsHowToPageDetails), HomePageObjects.tagsHowToPageDetails.getObjectname());
+			if(commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSearchResults),
+					HomePageObjects.txtSearchResults.getObjectname())) {
+				report.updateTestLog("Verify user navigated to search page on clicking the tags",
+						"User is successfully Navigated to the search page", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user navigated to search page on clicking the tags",
+						"User is NOT Navigated to the search Page", Status.FAIL);
+			}
+		}catch(Exception e) {
+			report.updateTestLog("Validate Tags in How to page", "Something went wrong!" + e.toString(),
+					Status.FAIL);
+		}
+	}
+	
+	public void validateSearchPage() {
+		try {
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSearchResults),
+					HomePageObjects.txtSearchResults.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(HomePageObjects.txtSearchResults),
+					HomePageObjects.txtSearchResults.getObjectname(), "“Charcoal Lighter”");
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblProducts),
+					HomePageObjects.lblProducts.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkRecipes),
+					HomePageObjects.lnkRecipes.getObjectname());
+			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkHowTo),
+					HomePageObjects.lnkHowTo.getObjectname());
+		}catch(Exception e) {
+			report.updateTestLog("Validate Search page", "Something went wrong!" + e.toString(),
+					Status.FAIL);
+		}
+	}
+	
+	public void validateTagsInRetailDetailsPage() {
+		try {
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.tagsRecipeDetailsPage), HomePageObjects.tagsRecipeDetailsPage.getObjectname());
+			if(commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.txtSearchResults),
+					HomePageObjects.txtSearchResults.getObjectname())) {
+				report.updateTestLog("Verify user navigated to search page on clicking the tags",
+						"User is successfully Navigated to the search page", Status.PASS);
+			} else {
+				report.updateTestLog("Verify user navigated to search page on clicking the tags",
+						"User is NOT Navigated to the search Page", Status.FAIL);
+			}
+		}catch(Exception e) {
+			report.updateTestLog("Validate Tags in How to page", "Something went wrong!" + e.toString(),
+					Status.FAIL);
+		}
+	}
 }
