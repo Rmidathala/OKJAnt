@@ -141,6 +141,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblProductPriceOnOverlay), ProductDetailsPageObjects.lblProductPriceOnOverlay.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
+			commonFunction.dismissAlertMessage();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblCartItemCount), ProductDetailsPageObjects.lblCartItemCount.getObjectname());
@@ -191,6 +192,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
+			commonFunction.dismissAlertMessage();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			
 		}catch(Exception e) {
@@ -202,7 +204,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	public void addProductToCartAndProceedToCheckout() {
 		try {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
-
+			commonFunction.dismissAlertMessage();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
 			
 		}catch(Exception e) {

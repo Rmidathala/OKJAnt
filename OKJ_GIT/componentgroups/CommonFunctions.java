@@ -1687,4 +1687,22 @@ public class CommonFunctions extends ReusableLibrary {
 					"Something really went wrong! :" + e.toString(), Status.FAIL);
 		}
 	}
+	public void dismissAlertMessage() throws Exception {
+		try {
+			// WebDriverWait wait = new WebDriverWait(driver.getWebDriver(), 20);
+
+			if (wait.until(ExpectedConditions.alertIsPresent()) != null) {
+				Alert alert = driver.getWebDriver().switchTo().alert();
+				// String retrievedMessage = alert.getText().trim();
+				alert.dismiss();;
+				report.updateTestLog("Dismiss Alert message", "Clicked on X button", Status.PASS);
+			}
+
+		} catch (Exception e) {
+			//e.printStackTrace();
+			/* report.updateTestLog("Dismiss Alert message", "Error in method - Error Description - " + e.toString(),
+					Status.FAIL); */
+		}
+	}
 }
+
