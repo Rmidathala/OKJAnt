@@ -1704,5 +1704,17 @@ public class CommonFunctions extends ReusableLibrary {
 					Status.FAIL); */
 		}
 	}
+	public  void closeChatBox() throws Exception {
+		WebElement chatClose = driver.findElementByXPath("//*[@id=\"tcChat_btnCloseChat_img\"]");
+		try {
+			if(driverUtil.isElementPresent(chatClose)) {
+				chatClose.click();
+				report.updateTestLog("Close Chat Box", "Clicked on X button", Status.PASS);
+			}
+			
+		}catch (Exception E) {
+			report.updateTestLog("Chat box not displayed", "X button not displayed", Status.PASS);
+		}
+	}
 }
 
