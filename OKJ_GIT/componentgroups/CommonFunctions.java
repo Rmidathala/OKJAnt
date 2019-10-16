@@ -1705,9 +1705,9 @@ public class CommonFunctions extends ReusableLibrary {
 		}
 	}
 	public  void closeChatBox() throws Exception {
-		WebElement chatClose = driver.findElementByXPath("//*iframe[@id=\'tcChat_btnCloseChat_img\']");
+		WebElement chatClose = driver.findElementByXPath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']");
 		try {
-			if(driverUtil.isElementPresent(chatClose)) {
+			if(webdriverutil.objectExists(By.xpath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']"))) {
 				chatClose.click();
 				report.updateTestLog("Close Chat Box", "Clicked on X button", Status.PASS);
 			}
@@ -1729,9 +1729,9 @@ public class CommonFunctions extends ReusableLibrary {
 				Thread.sleep(2000);
 				try {
 
-					if(driver.findElement(By.xpath("//*[@id=\'tcChat_btnCloseChat_img\']")).isDisplayed())
+					if(driver.findElement(By.xpath("//*[@id='tcChat_btnCloseChat']")).isDisplayed())
 					{
-						driver.findElement(By.xpath("//*[@id=\\'tcChat_btnCloseChat_img\\']")).click();
+						driver.findElement(By.xpath("//*[@id='tcChat_btnCloseChat']")).click();
 
 						driver.switchTo().defaultContent();
 
