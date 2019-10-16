@@ -1705,7 +1705,7 @@ public class CommonFunctions extends ReusableLibrary {
 		}
 	}
 	public  void closeChatBox() throws Exception {
-		WebElement chatClose = driver.findElementByXPath("//*[@id=\"tcChat_btnCloseChat_img\"]");
+		WebElement chatClose = driver.findElementByXPath("//*iframe[@id=\'tcChat_btnCloseChat_img\']");
 		try {
 			if(driverUtil.isElementPresent(chatClose)) {
 				chatClose.click();
@@ -1714,6 +1714,47 @@ public class CommonFunctions extends ReusableLibrary {
 			
 		}catch (Exception E) {
 			report.updateTestLog("Chat box not displayed", "X button not displayed", Status.PASS);
+		}
+	}
+	
+	public void liveChatPopUpHandle() 
+	{
+
+		try {
+
+			if(webdriverutil.objectExists(By.xpath("//iframe[@id='inqChatStage']")))
+			{
+				driver.switchTo().frame("inqChatStage");
+
+				Thread.sleep(2000);
+				try {
+
+					if(driver.findElement(By.xpath("//*[@id=\'tcChat_btnCloseChat_img\']")).isDisplayed())
+					{
+						driver.findElement(By.xpath("//*[@id=\\'tcChat_btnCloseChat_img\\']")).click();
+
+						driver.switchTo().defaultContent();
+
+
+						report.updateTestLog("Pop Up Handle", "Live CHat Pop up Appeared and closed Successfully", Status.PASS);
+					}
+				} 
+
+				catch (Exception e) {
+					driver.switchTo().defaultContent();
+					report.updateTestLog("Pop Up Handle", "Live CHat Pop up did not appear", Status.PASS);
+				}
+			}
+
+			else
+			{
+				report.updateTestLog("Pop Up Handle", "No pop up iframe is present", Status.PASS);
+			}
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in adding product in cart", "Exception is " + e, Status.FAIL);
 		}
 	}
 }
