@@ -95,6 +95,7 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblCancelledMainPriceOfProduct("//span[@class='price price__price-box price-final_price tax weee']/span/span/span",XPATH,"Product Details Page - Cancelled Main Price of the Product"),
 	lblDiscountedPriceOfProduct("//div[@class='price-box price__price-box price-final_price tier__discount']/span/span",XPATH,"Product Details Page - Discounted Price after selecting the higher quantity"),
 	lblTiredSavings("//div[@class='tier__savings']",XPATH,"Product Details Page - Tired Savings Text"),
+	buttonCloseChat("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']",XPATH,"Close button on Chat Pop up"),
 	;
 
 	String strProperty = "";

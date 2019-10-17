@@ -12,6 +12,7 @@ import com.cognizant.framework.selenium.WebDriverUtil;
 
 import componentgroups.CommonFunctions;
 import pages.ProductDetailsPageObjects;
+import pages.SupportPageObjects;
 
 
 public class ProductDetailsPageComponents extends ReusableLibrary {
@@ -190,9 +191,10 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	
 	public void addProductToCart() {
 		try {
+			commonFunction.chatBoxclose();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
-			commonFunction.closeChatBox();
+			commonFunction.chatBoxclose();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			
 		}catch(Exception e) {
@@ -203,10 +205,10 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	
 	public void addProductToCartAndProceedToCheckout() {
 		try {
-			commonFunction.closeChatBox();
+			commonFunction.chatBoxclose();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
-			commonFunction.closeChatBox();
+			commonFunction.chatBoxclose();
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
 		}catch(Exception e) {
 			report.updateTestLog("Product Details Page - Add Product to Cart and Checkout",

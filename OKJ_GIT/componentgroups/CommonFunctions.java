@@ -27,7 +27,7 @@ import com.cognizant.framework.selenium.CraftDriver;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
 import pages.PageObjects;
-
+import pages.ProductDetailsPageObjects;
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
 
@@ -1757,5 +1757,17 @@ public class CommonFunctions extends ReusableLibrary {
 			report.updateTestLog("Exception in adding product in cart", "Exception is " + e, Status.FAIL);
 		}
 	}
+	public void chatBoxclose() {
+		try {
+			
+		 if (verifyIfElementIsPresent((driver.findElement(By.xpath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']"))), "Close button")) {
+			 clickIfElementPresent((driver.findElement(By.xpath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']"))), "Close button");
+			 report.updateTestLog("Pop Up Handle", "Live CHat Pop up closed", Status.PASS);
+		 }
+		}
+		catch (Exception e) {
+			report.updateTestLog("Pop Up Handle", "Live CHat Pop up did not appear", Status.PASS);
+		}
+	 }
 }
 
