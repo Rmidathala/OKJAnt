@@ -2370,7 +2370,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.btnViewHow_To.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.imgHowToCleanAndMaintainSmoker),
 					HomePageObjects.imgHowToCleanAndMaintainSmoker.getObjectname());
-			if (driver.getCurrentUrl().contains("/how-tos/maintain-your-smoker") || driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos")) {
+			if (driver.getCurrentUrl().contains("/how-tos/maintain-your-smoker") || driver.getCurrentUrl().contains("/how-tos/select-the-right-cut-of-meat")) {
 				report.updateTestLog("Verify Navigation to How to Clean and Maintain Your Smoker- ",
 						"User is successfully Navigated to How to Clean and Maintain Your Smoker", Status.PASS);
 			} else {
@@ -2380,7 +2380,7 @@ public class HomePageComponents extends ReusableLibrary {
 			driver.navigate().back();	
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnViewHow_To),
 					HomePageObjects.btnViewHow_To.getObjectname());
-			if (driver.getCurrentUrl().contains("/how-tos/build-and-manage-the-perfect-fire") || driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos")) {
+			if (driver.getCurrentUrl().contains("/how-tos/build-and-manage-the-perfect-fire") || driver.getCurrentUrl().contains("how-tos/pick-the-best-smoking-wood")) {
 				report.updateTestLog("Verify Navigation to How to Build and Manage the Perfect Fire- ",
 						"User is successfully Navigated to How to Build and Manage the Perfect Fire", Status.PASS);
 			} else {
@@ -2630,7 +2630,7 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.btnViewRecipe.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.imgBoldAndSpicy),
 					HomePageObjects.imgBoldAndSpicy.getObjectname());
-			if (driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos") || driver.getCurrentUrl().contains("/recipes/reverse-seared-porterhouse-with-hasselback-potatoes")) {
+			if (driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos") || driver.getCurrentUrl().contains("/recipes/reverse-seared-porterhouse-with-hasselback-potatoes") || driver.getCurrentUrl().contains("/recipes/smoked-pork-belly-burnt-ends")) {
 				report.updateTestLog("Verify Navigation to Recipe - Bold and Spicy pulled pork nachos- ",
 						"User is successfully navigated to Recipe - Bold and Spicy pulled pork nachos", Status.PASS);
 			} else {
@@ -2640,9 +2640,9 @@ public class HomePageComponents extends ReusableLibrary {
 			driver.navigate().back();	
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnViewRecipe),
 					HomePageObjects.btnViewRecipe.getObjectname());
-			if (driver.getCurrentUrl().contains("/recipes/whole-smoked-chicken") || driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos")) {
-				report.updateTestLog("Verify Navigation to Recipe page - Whole Smoked Chicken- ",
-						"User is successfully Navigated to Recipe page - Whole Smoked Chicken", Status.PASS);
+			if (driver.getCurrentUrl().contains("/recipes/whole-smoked-chicken") || driver.getCurrentUrl().contains("/recipes/bold-and-spicy-pulled-pork-nachos") || driver.getCurrentUrl().contains("/recipes/chipotle-lime-beef-jerky")) {
+				report.updateTestLog("Verify Navigation to respective Recipe page - Whole Smoked Chicken- ",
+						"User is successfully Navigated to respective Recipe page - Whole Smoked Chicken", Status.PASS);
 			} else {
 				report.updateTestLog("Verify Navigation to Recipe page - Whole Smoked Chicken - ", "User is NOT Navigated to Recipe page - Whole Smoked Chicken",
 						Status.FAIL);

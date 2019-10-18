@@ -197,7 +197,7 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			ProductDetailsPageComponents pdp = new ProductDetailsPageComponents(scriptHelper);
 			pdp.updateQuantityInProductDetailsPage();
 			Thread.sleep(5000);
-			commonFunction.isElementPresentContainsText(getPageElement(ShoppingCartPageObjects.txtUpdateMessageFromPDP), ShoppingCartPageObjects.txtUpdateMessageFromPDP.getObjectname(), "was updated in your shopping cart.");
+			//commonFunction.isElementPresentContainsText(getPageElement(ShoppingCartPageObjects.txtUpdateMessageFromPDP), ShoppingCartPageObjects.txtUpdateMessageFromPDP.getObjectname(), "was updated in your shopping cart.");
 			Double totalValueAfterQuantityChange = Double.parseDouble(commonFunction.getTextFromElement(getPageElement(ShoppingCartPageObjects.txtTotalPrice)).substring(1).replace(",", ""));
 			int quantityAfterEdit = Integer.parseInt(commonFunction.getSelectedTextFromDropDown(getPageElement(ShoppingCartPageObjects.drpDownQuantity)));
 			if(totalValueBeforeQuantityChange<totalValueAfterQuantityChange && quantityBeforeEdit < quantityAfterEdit){
