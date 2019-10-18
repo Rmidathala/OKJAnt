@@ -1687,35 +1687,6 @@ public class CommonFunctions extends ReusableLibrary {
 					"Something really went wrong! :" + e.toString(), Status.FAIL);
 		}
 	}
-	public void dismissAlertMessage() throws Exception {
-		try {
-			// WebDriverWait wait = new WebDriverWait(driver.getWebDriver(), 20);
-
-			if (wait.until(ExpectedConditions.alertIsPresent()) != null) {
-				Alert alert = driver.getWebDriver().switchTo().alert();
-				// String retrievedMessage = alert.getText().trim();
-				alert.dismiss();;
-				report.updateTestLog("Dismiss Alert message", "Clicked on X button", Status.PASS);
-			}
-
-		} catch (Exception e) {
-			//e.printStackTrace();
-			/* report.updateTestLog("Dismiss Alert message", "Error in method - Error Description - " + e.toString(),
-					Status.FAIL); */
-		}
-	}
-	public  void closeChatBox() throws Exception {
-		WebElement chatClose = driver.findElementByXPath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']");
-		try {
-			if(webdriverutil.objectExists(By.xpath("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']"))) {
-				chatClose.click();
-				report.updateTestLog("Close Chat Box", "Clicked on X button", Status.PASS);
-			}
-			
-		}catch (Exception E) {
-			report.updateTestLog("Chat box not displayed", "X button not displayed", Status.PASS);
-		}
-	}
 	
 	public void liveChatPopUpHandle() 
 	{
