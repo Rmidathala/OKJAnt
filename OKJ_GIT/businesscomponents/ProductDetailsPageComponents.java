@@ -11,6 +11,7 @@ import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
 import componentgroups.CommonFunctions;
+import pages.HomePageObjects;
 import pages.ProductDetailsPageObjects;
 import pages.SupportPageObjects;
 
@@ -34,6 +35,25 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	WebDriverUtil webdriverutil = new WebDriverUtil(driver);
 
 	private WebElement getPageElement(ProductDetailsPageObjects pageEnum) {
+		WebElement element;
+		try {
+			element = commonFunction.getElementByProperty(pageEnum.getProperty(), pageEnum.getLocatorType().toString(),
+					true);
+			if (element != null) {
+				System.out.println("Found the element: " + pageEnum.getObjectname());
+				return element;
+			} else {
+				System.out.println("Element Not Found: " + pageEnum.getObjectname());
+				return null;
+			}
+		} catch (Exception e) {
+			report.updateTestLog("Product Details Page - get page element",
+					pageEnum.toString() + " object is not defined or found.", Status.FAIL);
+			return null;
+		}
+	}
+	
+	private WebElement getPageElement(HomePageObjects pageEnum) {
 		WebElement element;
 		try {
 			element = commonFunction.getElementByProperty(pageEnum.getProperty(), pageEnum.getLocatorType().toString(),
@@ -143,8 +163,9 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
 			commonFunction.chatBoxclose();
+			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname())) {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
-			
+			}
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblCartItemCount), ProductDetailsPageObjects.lblCartItemCount.getObjectname());
 			
 			if(Integer.parseInt(getPageElement(ProductDetailsPageObjects.lblCartItemCount).getText())>0) {
@@ -195,8 +216,10 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
 			commonFunction.chatBoxclose();
+			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname())) {
+				
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
-			
+			}
 		}catch(Exception e) {
 			report.updateTestLog("Product Details Page - Add Product to Cart",
 					"Something went wrong!" + e.toString(), Status.FAIL);
@@ -209,9 +232,15 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
 			commonFunction.chatBoxclose();
-			//driver.navigate().refresh();
+			
+			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname())) {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
-		}catch(Exception e) {
+		}
+			else {
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnCart),HomePageObjects.btnCart.getObjectname());
+			}
+			}
+			catch(Exception e) {
 			report.updateTestLog("Product Details Page - Add Product to Cart and Checkout",
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}

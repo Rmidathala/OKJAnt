@@ -230,6 +230,8 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lnkNaviTheCraft.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkNaviOurStory),
 					HomePageObjects.lnkNaviOurStory.getObjectname());
+			
+			commonFunction.homePagePopUpClose();
 
 			// Validate Navigation Menu Smokers & Grill
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
@@ -922,6 +924,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 	public void navigatetoProductListingPage() {
 		try {
+			commonFunction.homePagePopUpClose();
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnViewAllSmokersGrills),
