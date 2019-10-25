@@ -231,7 +231,11 @@ public class HomePageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkNaviOurStory),
 					HomePageObjects.lnkNaviOurStory.getObjectname());
 			
-			commonFunction.homePagePopUpClose();
+			//commonFunction.homePagePopUpClose();
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 
 			// Validate Navigation Menu Smokers & Grill
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
@@ -924,7 +928,11 @@ public class HomePageComponents extends ReusableLibrary {
 
 	public void navigatetoProductListingPage() {
 		try {
-			commonFunction.homePagePopUpClose();
+			//commonFunction.homePagePopUpClose();
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkNaviSmokerAndGrills),
 					HomePageObjects.lnkNaviSmokerAndGrills.getObjectname());
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnViewAllSmokersGrills),

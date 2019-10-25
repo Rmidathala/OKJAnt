@@ -26,6 +26,7 @@ import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.CraftDriver;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
+import pages.HomePageObjects;
 import pages.PageObjects;
 import pages.ProductDetailsPageObjects;
 import supportlibraries.ReusableLibrary;
@@ -1743,10 +1744,15 @@ public class CommonFunctions extends ReusableLibrary {
 	public void homePagePopUpClose() {
 		try {
 			
-		 if (verifyIfElementIsPresent((driver.findElement(By.xpath("//*[@id=\'lightbox-736e2ffb-a58f-4696-a136-ddf4351b44f6-1571823542766\']/div"))), "Close button")) {
+		 /*if (verifyIfElementIsPresent((driver.findElement(By.xpath("//*[@id=\'lightbox-736e2ffb-a58f-4696-a136-ddf4351b44f6-1571823542766\']/div"))), "Close button")) {
 			 clickIfElementPresent((driver.findElement(By.xpath("//*[@id=\\'lightbox-736e2ffb-a58f-4696-a136-ddf4351b44f6-1571823542766\\']/div"))), "Close button");
 			 report.updateTestLog("Pop Up Handle", "Home Page Pop up closed", Status.PASS);
-		 }
+		 }*/
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+				report.updateTestLog("Pop Up Handle", "Home Page Pop up closed", Status.PASS);
+			}
 		}
 		catch (Exception e) {
 			report.updateTestLog("Pop Up Handle", "Home Page Pop up did not appear", Status.PASS);
