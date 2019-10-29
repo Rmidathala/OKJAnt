@@ -96,6 +96,7 @@ public class WebDriverFactory {
 					    firefoxOptions.setCapability("assume_untrusted_cert_issuer", true);
 					    firefoxOptions.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
 					    //firefoxOptions.setHeadless(true);
+					    firefoxOptions.addArguments("--headless");
 						driver = new FirefoxDriver(firefoxOptions);
 
 						break;
