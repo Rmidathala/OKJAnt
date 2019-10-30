@@ -3,6 +3,7 @@ package businesscomponents;
 import java.time.LocalTime;
 import java.time.ZoneId;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import supportlibraries.ReusableLibrary;
@@ -163,7 +164,9 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
 			commonFunction.chatBoxclose();
-			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname())) {
+			if (driver.findElement(By.xpath("//button[@id='btn-minicart-continue']")).isDisplayed()) 
+			//commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname())
+			{
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			}
 			commonFunction.verifyIfElementIsPresent(getPageElement(ProductDetailsPageObjects.lblCartItemCount), ProductDetailsPageObjects.lblCartItemCount.getObjectname());
@@ -216,8 +219,8 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnAddToCart), ProductDetailsPageObjects.btnAddToCart.getObjectname());
 			Thread.sleep(5000);
 			commonFunction.chatBoxclose();
-			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname())) {
-				
+			if (driver.findElement(By.xpath("//button[@id='btn-minicart-continue']")).isDisplayed())  {
+			//commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname()); 			
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnContinuShoppingOnOverlay), ProductDetailsPageObjects.btnContinuShoppingOnOverlay.getObjectname());
 			}
 		}catch(Exception e) {
@@ -233,7 +236,8 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			Thread.sleep(5000);
 			commonFunction.chatBoxclose();
 			
-			if (commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname())) {
+			if (driver.findElement(By.id("top-cart-btn-checkout")).isDisplayed()) {
+					//commonFunction.verifyIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname())) 
 			commonFunction.clickIfElementPresent(getPageElement(ProductDetailsPageObjects.btnCheckOutOnOverlay), ProductDetailsPageObjects.btnCheckOutOnOverlay.getObjectname());
 		}
 			else {
