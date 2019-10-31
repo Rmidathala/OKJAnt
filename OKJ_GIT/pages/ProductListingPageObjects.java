@@ -46,7 +46,7 @@ public enum ProductListingPageObjects implements PageObjects {
 	expandCateoryHowToPage("//div[@class='toolbar-filter__title']/span[text()='Category']",XPATH,"How to Page - Category Option"),
 	checkBoxFoodHowTo("(//span[@class='filter-list__link']/span[1])[1]",XPATH,"How To Page - checkbox - Food How To"),
 	expandDifficultyHowToPage("//div[@class='toolbar-filter__title']/span[text()='Difficulty']",XPATH,"How to Page - Difficulty Option"),
-	checkBoxBeginner("(//span[@class='filter-list__link']/span[1])[2]",XPATH,"How To Page - Checkbox - Beginner"),
+	checkBoxBeginner("(//span[@class='filter-list__link']/span[1])[4]",XPATH,"How To Page - Checkbox - Beginner"),
 	btnApplyHowToPage("//div[@class='toolbar-filter__top--apply']",XPATH,"How To Page - Filter - apply btn"),
 	lnkclearAllFilters("//div[@class='filter-current__remove-all']/a",XPATH,"How To Page - Filter - Clear All Filters Link"),
 	itmFirstProductHowToPage("//div[@class='container cards__container']/a[1]",XPATH,"How to Page - First Product"),
