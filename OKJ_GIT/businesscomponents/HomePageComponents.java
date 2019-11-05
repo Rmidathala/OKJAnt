@@ -471,7 +471,11 @@ public class HomePageComponents extends ReusableLibrary {
 	public void validateSearch() {
 		try {
 			String searchText = dataTable.getData("General_Data", "SearchText");
-
+			
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnSearch),
 					HomePageObjects.btnSearch.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxSearch), searchText,
@@ -608,7 +612,7 @@ public class HomePageComponents extends ReusableLibrary {
 			String partModel = dataTable.getData("General_Data", "ProductModelNumber");
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxPartSearch), partModel,
 					HomePageObjects.txtBoxPartSearch.getObjectname());
-			Thread.sleep(2000);
+			Thread.sleep(10000);
 			/*
 			 * commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.
 			 * PartsSearchList), HomePageObjects.PartsSearchList.getObjectname());
