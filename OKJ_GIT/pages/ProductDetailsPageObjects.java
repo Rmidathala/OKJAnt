@@ -96,6 +96,9 @@ public enum ProductDetailsPageObjects implements PageObjects {
 	lblDiscountedPriceOfProduct("//div[@class='price-box price__price-box price-final_price tier__discount']/span/span",XPATH,"Product Details Page - Discounted Price after selecting the higher quantity"),
 	lblTiredSavings("//div[@class='tier__savings']",XPATH,"Product Details Page - Tired Savings Text"),
 	buttonCloseChat("//iframe[@id='inqChatStage']//following-sibling::div//button[@id='tcChat_btnCloseChat_img']",XPATH,"Close button on Chat Pop up"),
+	imgLogo("//*[@alt='OKJ logo prod badge']",XPATH,"Logo in image section of promotional product"),
+	bannerPromoProduct("//*[@alt='alt highlight top']",XPATH,"banner on top for a promotional product"),
+	bannerPromoProductBelowDesc("//*[@alt='Alt Highlight desc']",XPATH,"banner below description for a promotional product"),
 	;
 
 	String strProperty = "";

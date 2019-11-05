@@ -427,5 +427,16 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 					"Something went wrong!" + e.toString(), Status.FAIL);
 		}
 	}
-	
+	public void validatePromotionalBanner() {
+		try {
+			
+		commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.bannerPromoProduct), ProductDetailsPageObjects.bannerPromoProduct.getObjectname());
+		commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.bannerPromoProductBelowDesc), ProductDetailsPageObjects.bannerPromoProductBelowDesc.getObjectname());
+		commonFunction.isElementPresentVerification(getPageElement(ProductDetailsPageObjects.imgLogo), ProductDetailsPageObjects.imgLogo.getObjectname());
+		report.updateTestLog("Promotional products banner and logo validation","Banners and logo are present", Status.PASS);
+		}
+		catch(Exception e) {
+			report.updateTestLog("Promotional products banner and logo validation", "Banner or logo not present" + e.toString(), Status.FAIL);
+		}
+	}
 }

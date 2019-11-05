@@ -589,14 +589,14 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.lblMonToFri.getObjectname());
 			commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkSendEmail),
 					HomePageObjects.lnkSendEmail.getObjectname());
-			
+			/*
 			if (liveTime.getHour() < 9 & liveTime.getHour() > 21) {
 				commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lblChatBusinessHour),
 						HomePageObjects.lblChatBusinessHour.getObjectname());
 			} else {
 				commonFunction.verifyIfElementIsPresent(getPageElement(HomePageObjects.lnkLiveChat),
 						HomePageObjects.lnkLiveChat.getObjectname());
-			}
+			}*/
 			driver.navigate().refresh();
 		} catch (Exception e) {
 			report.updateTestLog("Footer - Validation", "Something went wrong!" + e.toString(), Status.FAIL);
