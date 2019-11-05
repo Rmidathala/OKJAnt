@@ -1,4 +1,4 @@
-<project name="OKJ" basedir="." default="main">
+<project name="HelloWorld" basedir="." default="main">
 <!-- Please update the below path with Project path (Eclipse workspace Project path) -->
 	
 
