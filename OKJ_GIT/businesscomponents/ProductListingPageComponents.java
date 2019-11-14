@@ -151,13 +151,15 @@ public class ProductListingPageComponents extends ReusableLibrary {
 
 			if (commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.itmFirstProduct),
 					ProductListingPageObjects.itmFirstProduct.getObjectname())) {
-				report.updateTestLog("Verify Products displayed after applying Color filter",
-						"The filtered prodcuts are displayed after the applying the color filter", Status.PASS);
+				report.updateTestLog("Verify Products displayed after applying category filter",
+						"The filtered prodcuts are displayed after the applying the category filter", Status.PASS);
 			} else {
-				report.updateTestLog("Verify Products displayed after applying Color filter",
-						"The filtered products are NOT displayed after the applying the color filter", Status.FAIL);
+				report.updateTestLog("Verify Products displayed after applying category filter",
+						"The filtered products are NOT displayed after the applying the category filter", Status.FAIL);
 			}
-
+			
+			Thread.sleep(8000);
+			commonFunction.chatBoxclose();
 			commonFunction.clickIfElementPresent(getPageElement(ProductListingPageObjects.btnFilter),
 					ProductListingPageObjects.btnFilter.getObjectname());
 
@@ -176,11 +178,11 @@ public class ProductListingPageComponents extends ReusableLibrary {
 			if (commonFunction.verifyIfElementIsPresent(getPageElement(ProductListingPageObjects.itmFirstProduct),
 					ProductListingPageObjects.itmFirstProduct.getObjectname())) {
 				report.updateTestLog("Verify Products displayed after applying Color and Price filter",
-						"The filtered prodcuts are displayed after the applying the color and Price filter",
+						"The filtered prodcuts are displayed after the applying the category and Price filter",
 						Status.PASS);
 			} else {
 				report.updateTestLog("Verify Products displayed after applying Color and Price filter",
-						"The filtered products are NOT displayed after the applying the color and Price filter",
+						"The filtered products are NOT displayed after the applying the category and Price filter",
 						Status.FAIL);
 			}
 		} catch (Exception e) {

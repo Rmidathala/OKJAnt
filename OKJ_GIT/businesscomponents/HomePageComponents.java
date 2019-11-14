@@ -715,6 +715,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.facebookIcon),
 					HomePageObjects.facebookIcon.getObjectname());
+			Thread.sleep(8000);
 			mainWindow = driver.getWindowHandle();
 			driver.switchTo().window(new ArrayList<String>(driver.getWindowHandles()).get(1));
 			for (int count = 1; count <= 5; count++) {
@@ -746,6 +747,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.twitterIcon),
 					HomePageObjects.twitterIcon.getObjectname());
+			Thread.sleep(8000);
 			mainWindow = driver.getWindowHandle();
 			driver.switchTo().window(new ArrayList<String>(driver.getWindowHandles()).get(1));
 			for (int count = 1; count <= 5; count++) {
@@ -777,6 +779,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.pinterestIcon),
 					HomePageObjects.pinterestIcon.getObjectname());
+			Thread.sleep(8000);
 			mainWindow = driver.getWindowHandle();
 			driver.switchTo().window(new ArrayList<String>(driver.getWindowHandles()).get(1));
 			for (int count = 1; count <= 5; count++) {
@@ -808,6 +811,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.instagramIcon),
 					HomePageObjects.instagramIcon.getObjectname());
+			Thread.sleep(8000);
 			mainWindow = driver.getWindowHandle();
 			driver.switchTo().window(new ArrayList<String>(driver.getWindowHandles()).get(1));
 			for (int count = 1; count <= 5; count++) {
@@ -839,6 +843,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.youtubeIcon),
 					HomePageObjects.youtubeIcon.getObjectname());
+			Thread.sleep(8000);
 			mainWindow = driver.getWindowHandle();
 			driver.switchTo().window(new ArrayList<String>(driver.getWindowHandles()).get(1));
 			for (int count = 1; count <= 5; count++) {
