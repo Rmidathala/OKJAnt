@@ -658,6 +658,10 @@ public class HomePageComponents extends ReusableLibrary {
 
 	public void validatelinksInSupportInFooter() {
 		try {
+			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
+				commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
+						HomePageObjects.btnClosePopUp.getObjectname());
+			}
 			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.lnkFAQ),
 					HomePageObjects.lnkFAQ.getObjectname());
 			if (driver.getCurrentUrl().contains("/faqs")) {
