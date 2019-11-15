@@ -613,12 +613,11 @@ public class HomePageComponents extends ReusableLibrary {
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxPartSearch), partModel,
 					HomePageObjects.txtBoxPartSearch.getObjectname());
 			Thread.sleep(10000);
-			/*
-			 * commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.
-			 * PartsSearchList), HomePageObjects.PartsSearchList.getObjectname());
-			 */
-			commonFunction.hitEnterKey(getPageElement(HomePageObjects.txtBoxPartSearch),
-					HomePageObjects.txtBoxPartSearch.getObjectname());
+			
+			  commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.PartsSearchresult), HomePageObjects.PartsSearchresult.getObjectname());
+			 
+			//commonFunction.hitEnterKey(getPageElement(HomePageObjects.txtBoxPartSearch),
+					//HomePageObjects.txtBoxPartSearch.getObjectname());
 			if (driver.getCurrentUrl().contains("/parts/search/results/?model=" + partModel)) {
 				report.updateTestLog("Verify Part Listing Page from Footer",
 						"User is successfully navigated to Part Listing page", Status.PASS);

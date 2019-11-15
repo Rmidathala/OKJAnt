@@ -155,6 +155,7 @@ public enum HomePageObjects implements PageObjects {
 	lblParts("//h3[@class='footer__headline' and text()='Parts']",XPATH,"Footer label: Parts"),
 	txtBoxPartSearch("//input[@class='form__input footer__form-input']",XPATH,"Footer - Part Search text Box"),
 	PartsSearchList("//div[@id='footer-partfinder__suggestions']/ul/li",XPATH,"Footer - Parts Search Suggesstions"),
+	PartsSearchresult("//*[@id=\'qs-option-0\']",XPATH,"Footer - Parts Search Suggesstions"),
 	txtPartContactService("//div[@class='form__info footer__form-info']/span",XPATH,"Footer - Parts - Help identifying model"),
 	txtSearchSuggestion("//input[@class='form__input footer__form-input']/following::li[1]",XPATH,"Parts Search Suggestion"),
 	msgPartSearchError("footer-partfinder__no-results",ID,"Home Page - Footer - Error messsage for invalid part model#"),
