@@ -612,7 +612,7 @@ public class HomePageComponents extends ReusableLibrary {
 			String partModel = dataTable.getData("General_Data", "ProductModelNumber");
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxPartSearch), partModel,
 					HomePageObjects.txtBoxPartSearch.getObjectname());
-			Thread.sleep(10000);
+			Thread.sleep(15000);
 			
 			  commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.PartsSearchresult), HomePageObjects.PartsSearchresult.getObjectname());
 			 
