@@ -610,9 +610,10 @@ public class HomePageComponents extends ReusableLibrary {
 	public void validatePartsSearchInFooter() {
 		try {
 			String partModel = dataTable.getData("General_Data", "ProductModelNumber");
+			commonFunction.scrollIntoView(getPageElement(HomePageObjects.txtBoxPartSearch));
 			commonFunction.clearAndEnterText(getPageElement(HomePageObjects.txtBoxPartSearch), partModel,
 					HomePageObjects.txtBoxPartSearch.getObjectname());
-			Thread.sleep(15000);
+			Thread.sleep(10000);
 			
 			  commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.PartsSearchresult), HomePageObjects.PartsSearchresult.getObjectname());
 			 
