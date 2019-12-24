@@ -175,6 +175,7 @@ public class PelletPageComponents extends ReusableLibrary {
 			return null;
 		}
 	}
+	
 	public void verifyPelletPageHeroImage() {
 
 		try {
