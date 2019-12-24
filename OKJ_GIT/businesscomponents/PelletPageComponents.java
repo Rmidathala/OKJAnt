@@ -269,6 +269,7 @@ public class PelletPageComponents extends ReusableLibrary {
 				report.updateTestLog("Verify user is navigated to recipes page", 
 						"User is not navigated to recipes page", Status.FAIL);	
 			}
+			
 			driver.navigate().back();
 			
 	}
