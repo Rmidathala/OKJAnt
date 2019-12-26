@@ -54,12 +54,18 @@ public class PelletLandingPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(PelletPageObjects.headerLogo),
 					PelletPageObjects.headerLogo.getObjectname());
 
-			commonFunction.isElementPresentContainsText(getPageElement(PelletPageObjects.textHeroTitle),
-					PelletPageObjects.textHeroTitle.getObjectname(), heroTitle);
-			commonFunction.isElementPresentContainsText(getPageElement(PelletPageObjects.textHeroButtomText),
-					PelletPageObjects.textHeroButtomText.getObjectname(), heroText);
-			System.out.println(getPageElement(PelletPageObjects.textHeroTitle).getText());
-			System.out.println(getPageElement(PelletPageObjects.textHeroButtomText).getText());
+			if (commonFunction.isElementPresentContainsText(getPageElement(PelletPageObjects.textHeroTitle),
+					PelletPageObjects.textHeroTitle.getObjectname(), heroTitle))
+			report.updateTestLog("Hero title Validation", "Hero Title is displayed correctly", Status.PASS);
+			else
+				report.updateTestLog("Hero title Validation", "Hero Title is not displayed correctly", Status.FAIL);
+			if(commonFunction.isElementPresentContainsText(getPageElement(PelletPageObjects.textHeroButtomText),
+					PelletPageObjects.textHeroButtomText.getObjectname(), heroText))
+			report.updateTestLog("Hero text Validation", "Hero text is displayed correctly", Status.PASS);
+			else
+				report.updateTestLog("Hero text Validation", "Hero text is not displayed correctly", Status.FAIL);
+			//System.out.println(getPageElement(PelletPageObjects.textHeroTitle).getText());
+			//System.out.println(getPageElement(PelletPageObjects.textHeroButtomText).getText());
 		} catch (Exception e) {
 			report.updateTestLog("Pellet Page - Hero Image Validation", "Something went wrong!" + e.toString(),
 					Status.FAIL);
