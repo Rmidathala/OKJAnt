@@ -48,7 +48,6 @@ public class PelletLandingPageComponents extends ReusableLibrary {
 	}
 	
 	public void verifyPelletPageHeroImage() {
-
 		try {
 			String heroTitle = dataTable.getData("General_Data", "Hero Title");
 			String heroText = dataTable.getData("General_Data", "Hero Text");
