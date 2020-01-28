@@ -8,7 +8,7 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	txtShoppingCartTitle("cart__title", CLASSNAME, "Cart Page - Title"),
 	txtNoItems("//*[@id='maincontent']/div/div/div[1]/div[2]/div[1]/p",XPATH,"No Item text on the shipping cart"),
 	
-	imgAddedProductImage("//img[@class='product-image-photo']",XPATH,"Added Product Image"),
+	imgAddedProductImage("//img[@class='product-listing--img product-image-photo']",XPATH,"Added Product Image"),
 	txtCartItemName("cart-item__info__name",CLASSNAME,"Added Product Name in the Cart Page"),
 	lblPrice("cart-item__info__price",CLASSNAME,"Price Lable on the Shopping Cart Page"),
 	txtProductPrice("//div[@class='cart-item__info__price']/span/span/span",XPATH,"Product Price on the shopping cart Page"),
