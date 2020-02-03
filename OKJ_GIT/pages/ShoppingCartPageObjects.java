@@ -61,6 +61,12 @@ public enum ShoppingCartPageObjects implements PageObjects {
 	
 	lblTax("//tr[@class='totals-tax']/th",XPATH,"Shipping Cart Page - Tax Label "),
 	taxValue("//tr[@class='totals-tax']/td",XPATH,"Shipping Cart Page - Tax doller"),
+	
+	
+	
+	//LTL validation
+	
+	iconTooltip("//span[@class='shipping-tooltip']",XPATH,"Tooltip icon"),
 	;
 
 	String strProperty = "";

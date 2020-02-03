@@ -11,6 +11,7 @@ import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
 import componentgroups.CommonFunctions;
+import pages.HomePageObjects;
 import pages.ProductDetailsPageObjects;
 import pages.ShoppingCartPageObjects;
 public class ShoppingCartPageComponents extends ReusableLibrary {
@@ -67,6 +68,24 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 		}
 	}
 	
+	private WebElement getPageElement(HomePageObjects pageEnum) {
+		WebElement element;
+		try {
+			element = commonFunction.getElementByProperty(pageEnum.getProperty(), pageEnum.getLocatorType().toString(),
+					true);
+			if (element != null) {
+				System.out.println("Found the element: " + pageEnum.getObjectname());
+				return element;
+			} else {
+				System.out.println("Element Not Found: " + pageEnum.getObjectname());
+				return null;
+			}
+		} catch (Exception e) {
+			report.updateTestLog("Product Details Page - get page element",
+					pageEnum.toString() + " object is not defined or found.", Status.FAIL);
+			return null;
+		}
+	}
 	public void validateShoppingCartPage() {
 		try {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ShoppingCartPageObjects.txtShoppingCartTitle),
@@ -458,6 +477,24 @@ public class ShoppingCartPageComponents extends ReusableLibrary {
 			commonFunction.verifyIfElementIsPresent(getPageElement(ShoppingCartPageObjects.taxValue),
 					ShoppingCartPageObjects.taxValue.getObjectname());
 			
+		}catch(Exception e) {
+			report.updateTestLog("Shipping Cart -  validate Shipping Tax Estimate ",
+					"Something went wrong!" + e.toString(), Status.FAIL);
+		}
+	}
+	
+	public void validateLTLItemCheckout() {
+		try {
+			
+			//commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnCart),HomePageObjects.btnCart.getObjectname());
+			commonFunction.moveToAnElement(getPageElement(ShoppingCartPageObjects.iconTooltip),ShoppingCartPageObjects.iconTooltip.getObjectname());
+			commonFunction.isElementPresentContainsText(getPageElement(ShoppingCartPageObjects.iconTooltip),ShoppingCartPageObjects.iconTooltip.getObjectname(), "We make the most thoughtfully designed tools you can count on with rugged, heavy-duty materials, which can get heavy. Your products will be shipped via freight carrier and you will need to be present to sign for delivery and to take the item(s) off the truck. We suggest grabbing a buddy or two to help move and assemble your new smoker or grill in exchange for the first delicious rack of ribs.");
+			report.updateTestLog("Shopping Cart -  validate LTL item message ",
+					"LTL Item message displayed in shopping cart page" , Status.PASS);
+			if (driver.getCurrentUrl().contains("/cart"))
+			commonFunction.clickIfElementPresent(getPageElement(HomePageObjects.btnCart),HomePageObjects.btnCart.getObjectname());
+			//commonFunction.clickIfElementPresent(getPageElement(ShoppingCartPageObjects.btnCheckout),ShoppingCartPageObjects.btnCheckout.getObjectname());
+			//commonFunction.moveToAnElement(getPageElement(HomePageObjects.headerLogo),HomePageObjects.headerLogo.getObjectname());
 		}catch(Exception e) {
 			report.updateTestLog("Shipping Cart -  validate Shipping Tax Estimate ",
 					"Something went wrong!" + e.toString(), Status.FAIL);
