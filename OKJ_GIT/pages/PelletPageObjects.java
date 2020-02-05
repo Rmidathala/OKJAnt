@@ -8,9 +8,9 @@ public enum PelletPageObjects implements PageObjects {
 	headerLogo("a.header-logo",CSS,"Header Logo"),
 	textHeroTitle("//span[@class='homepage-hero__top-text homepage-hero__bottom-text']",XPATH,"Hero Title on hero Image"),
 	textHeroButtomText("//span[@class='homepage-hero__bottom-text']",XPATH,"Hero Text on hero Image"),
-	texproduct1("//*[@title='Rider DLX Pellet Grill']",XPATH,"First product title"),
-	texproduct2("//*[@title='Rider 900 Pellet Grill']",XPATH,"Second product title"),
-	texproduct3("//*[@title='Rider 600 Pellet Grill']",XPATH,"Third product title"),
+	texproduct1("(//*[@class='feature-product--rider'])[1]",XPATH,"First product title"),
+	texproduct2("(//*[@class='feature-product--rider'])[2]",XPATH,"Second product title"),
+	texproduct3("(//*[@class='feature-product--rider'])[3]",XPATH,"Third product title"),
 	btnLearnProduct1("(//*[@class='feature-product__learn button'])[1]",XPATH,"Learn button for first product"),
 	btnLearnProduct2("(//*[@class='feature-product__learn button'])[2]",XPATH,"Learn button for second product"),
 	btnLearnProduct3("(//*[@class='feature-product__learn button'])[3]",XPATH,"Learn button for third product"),
@@ -20,6 +20,10 @@ public enum PelletPageObjects implements PageObjects {
 	btnSlider1("(//div[@class='feature-product__arrow right'])[1]",XPATH,"Image slider 1"),
 	btnslider2("//div[@class='feature-product__arrow left']",XPATH,"Image slider 2"),
 	btnSlider3("(//div[@class='feature-product__arrow right'])[2]",XPATH,"Image slider 3"),
+	linkFindPartsAndManuals("//*[@class='specifications__parts-link']",XPATH,"Find Parts and Manuals link"),
+	linkReplacementGuide("(//*[@class='parts__link'])[2]",XPATH,"Replacement Guide Link"),
+	contentPDFReplacementGuide("//div[@id='content']",XPATH,"Replacement Guide PDF"),
+	linkProductGuide("(//*[@class='guide__link'])[1]",XPATH,"Product Guide Link"),
 	
 		;
 	

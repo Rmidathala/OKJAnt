@@ -2,6 +2,8 @@ package businesscomponents;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebElement;
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
@@ -155,5 +157,42 @@ public class PelletLandingPageComponents extends ReusableLibrary {
 					Status.FAIL);
 		}
 }
+	public void validatePelletGuides() {
+		try{
+			commonFunction.clickIfElementPresent(getPageElement(PelletPageObjects.btnLearnProduct1), 
+					PelletPageObjects.btnLearnProduct1.getObjectname());
+			commonFunction.scrollIntoView(getPageElement(PelletPageObjects.linkFindPartsAndManuals));
+			commonFunction.clickIfElementPresent(getPageElement(PelletPageObjects.linkFindPartsAndManuals), 
+					PelletPageObjects.linkFindPartsAndManuals.getObjectname());
+			if(commonFunction.verifyIfElementIsPresent(getPageElement(PelletPageObjects.linkReplacementGuide), PelletPageObjects.linkReplacementGuide.getObjectname()))
+			report.updateTestLog("Verify replacement guide link is present", 
+					"Replacement guide link is present", Status.PASS);
+			else
+				report.updateTestLog("Verify replacement guide link is present", 
+						"Replacement guide link is not present", Status.FAIL);
+			/*commonFunction.clickIfElementPresent(getPageElement(PelletPageObjects.linkReplacementGuide), 
+					PelletPageObjects.linkReplacementGuide.getObjectname());
+			//Thread.sleep(3000);
+			//commonFunction.SwitchControlToChildTab();
+			
+			
+				
+			if (driver.getCurrentUrl().contains("content.wcbradley.com/"))
+				report.updateTestLog("Verify replacement guide link navigated to currect PDF", 
+						"Replacement guide link is navigated to correct PDF", Status.PASS);
+			//commonFunction.verifyIfElementIsPresent(getPageElement(PelletPageObjects.contentPDFReplacementGuide), PelletPageObjects.contentPDFReplacementGuide.getObjectname());
+			//commonFunction.SwitchControlToParentTab();
+			driver.switchTo().window(tabs2.get(0));*/
+			commonFunction.clickIfElementPresent(getPageElement(PelletPageObjects.linkProductGuide), 
+					PelletPageObjects.linkProductGuide.getObjectname());
+			if (driver.getCurrentUrl().contains("content.wcbradley.com/"))
+				report.updateTestLog("Verify product guide link navigated to currect PDF", 
+						"Product guide link is navigated to correct PDF", Status.PASS);
+		}
+		catch (Exception e) {
+			report.updateTestLog("Pellet Page - components verification", "Something went wrong!" + e.toString(),
+					Status.FAIL);
+		}
+	}
 }
 
