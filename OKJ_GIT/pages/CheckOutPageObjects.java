@@ -112,6 +112,8 @@ public enum CheckOutPageObjects implements PageObjects {
 	iconCharbroiIcon("//div[@class='headerWrapper']/img",XPATH,"Pay Pal Page- Charbroil Icon"),
 	amtTotalAmount("//format-currency[@class='formatCurrency ng-isolate-scope']/span",XPATH,"Pay Pal Page - Total Amount in $"),
 	
+	radioCreditCard("(//*[@data-bind='text: getTitle()'])[2]",XPATH,"Credit card Radio button"),
+	
 	//
 	;
 
