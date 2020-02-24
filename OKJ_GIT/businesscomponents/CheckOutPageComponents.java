@@ -237,7 +237,7 @@ public class CheckOutPageComponents extends ReusableLibrary {
 		try {
 			String cardType = dataTable.getData("General_Data", "CardType");
 			String cardNo = dataTable.getData("General_Data", "CardNo");
-			
+			driver.findElement(By.xpath("(//*[@class='payment-method-title field choice'])[3]")).click();
 			commonFunction.clearAndEnterText(getPageElement(CheckOutPageObjects.txtBoxCreditCartNumber), cardNo, CheckOutPageObjects.txtBoxCreditCartNumber.getObjectname());
 			switch (cardType) {
 			case "VISA" :
