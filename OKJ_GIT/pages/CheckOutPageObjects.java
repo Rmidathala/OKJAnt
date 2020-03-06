@@ -88,7 +88,7 @@ public enum CheckOutPageObjects implements PageObjects {
 	
 	
 	lblBillingInformationAfterContinueBilling("//h2[@class='checkout__title']",XPATH,"Checkout Page: Billing Information Label"),
-	txtBoxCreditCartNumber("//input[@name='credit-card-number']",XPATH,"Billing Page: Credit Cart Number Text Box"),
+	txtBoxCreditCartNumber("//div[@id='chcybersource_microform_container']",XPATH,"Billing Page: Credit Cart Number Text Box"),
 	imgVisa("//img[@alt='Visa']",XPATH,"Billing Page: Visa Image in Credit Card Number Text Box"),
 	imgMaster("//img[@alt='MasterCard']",XPATH,"Billing Page: Master Card Image in Credet card Number Text Box"),
 	imgDiscover("//img[@alt='Discover']",XPATH,"Billing Page: Discover Card Image in Credit Cart Number Text Box"),
