@@ -239,9 +239,27 @@ public class CheckOutPageComponents extends ReusableLibrary {
 			String cardNo = dataTable.getData("General_Data", "CardNo");
 			//driver.findElement(By.xpath("(//*[@class='payment-method-title field choice'])[3]")).click();
 			//commonFunction.clickIfElementPresent(getPageElement(CheckOutPageObjects.radioCreditCard), CheckOutPageObjects.radioCreditCard.getObjectname());
-			commonFunction.clickIfElementPresentJavaScript(getPageElement(CheckOutPageObjects.radioCreditCard), CheckOutPageObjects.radioCreditCard.getObjectname());
-			commonFunction.scrollIntoView(getPageElement(CheckOutPageObjects.txtBoxCreditCartNumber));
+			//commonFunction.clickIfElementPresentJavaScript(getPageElement(CheckOutPageObjects.radioCreditCard), CheckOutPageObjects.radioCreditCard.getObjectname());
+			//commonFunction.scrollIntoView(getPageElement(CheckOutPageObjects.txtBoxCreditCartNumber));
+			//driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[1])[3]")));
+			//driver.switchTo().frame(4);
+			
+			int size = driver.findElements(By.tagName("iframe")).size();
+
+            for(int j=0; j<=size; j++)
+            {
+               driver.switchTo().frame(j);
+               int total=driver.findElements(By.xpath("//input[@name='credit-card-number']")).size();
+               if (total==1)
+               {
+            break;
+               }
+            driver.switchTo().defaultContent();
+            }
+					
+			commonFunction.clickIfElementPresent(getPageElement(CheckOutPageObjects.txtBoxCreditCartNumber), CheckOutPageObjects.txtBoxCreditCartNumber.getObjectname());
 			commonFunction.clearAndEnterText(getPageElement(CheckOutPageObjects.txtBoxCreditCartNumber), cardNo, CheckOutPageObjects.txtBoxCreditCartNumber.getObjectname());
+			driver.switchTo().defaultContent();
 			switch (cardType) {
 			case "VISA" :
 				commonFunction.verifyIfElementIsPresent(getPageElement(CheckOutPageObjects.imgVisa),
@@ -257,6 +275,7 @@ public class CheckOutPageComponents extends ReusableLibrary {
 				break;
 				
 			}
+			//driver.switchTo().defaultContent();
 			
 			commonFunction.selectAnyElement(getPageElement(CheckOutPageObjects.drpDownExpiryMonth), 5, CheckOutPageObjects.drpDownExpiryMonth.getObjectname());
 			
