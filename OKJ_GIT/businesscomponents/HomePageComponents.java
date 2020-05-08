@@ -2779,7 +2779,8 @@ public class HomePageComponents extends ReusableLibrary {
 					HomePageObjects.txtSearchResults.getObjectname())) {
 				report.updateTestLog("Verify user navigated to search page on clicking the tags",
 						"User is successfully Navigated to the search page", Status.PASS);
-			} else {
+			} 
+			else {
 				report.updateTestLog("Verify user navigated to search page on clicking the tags",
 						"User is NOT Navigated to the search Page", Status.FAIL);
 			}
