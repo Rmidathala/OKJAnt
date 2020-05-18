@@ -12,47 +12,47 @@ public enum HomePageObjects implements PageObjects {
 	//Header navigation links
 	lnkNaviSmokerAndGrills("//span[text()='Smokers & Grills']",XPATH,"Smoker & Grill Navigation menu"), 
 	txtSmokerAndGrillsPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Smoker & Grill Page Heading"),
-	txtSmokerAndGrillsPageTitleDescription("//div[@class='category-description']/p",XPATH,"Smoker & Grills Page Heading- Description"),
+	txtSmokerAndGrillsPageTitleDescription("//div[@class='category-description']",XPATH,"Smoker & Grills Page Heading- Description"),
 	
 	
 	lnkNaviAccessoriesAndParts("//span[text()='Accessories & Parts']",XPATH,"Accesories & Part Navigation Menu"),
 	txtAccessorisAndPartsPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Accessories & Parts Page Heading"),
-	txtAccessoriesAndPartsPageTitleDescription("//div[@class='category-description']/p",XPATH,"Accessories & Parts Page Heading- Description"),
+	txtAccessoriesAndPartsPageTitleDescription("//div[@class='category-description']",XPATH,"Accessories & Parts Page Heading- Description"),
 	
 	lnkNaviTheCraft("//span[text()='The Craft']",XPATH,"The Craft Navigation Menu"),
 	txtTheCraftPageTitle("//div[@class='hero__text-container hero__text-container--craft']/h1",XPATH,"The Craft Page Heading"),
-	txtTheCraftPageTitleDescription("//span[@class='hero__description']",XPATH,"The Craft Page Heading- Description"),
+	txtTheCraftPageTitleDescription("//div[@class='hero__description']",XPATH,"The Craft Page Heading- Description"),
 	
 	
 	lnkNaviOurStory("//span[text()='Our Story']",XPATH,"Our Story Navigation Menu"),
 	txtOurStoryPageTitle("//div[@class='hero__text-container hero__text-container--aboutus']/h1",XPATH,"Our Story Page Heading"),
-	txtOurStoryPageTitleDescription("//span[@class='hero__description']",XPATH,"Our Story Page Heading- Description"),
+	txtOurStoryPageTitleDescription("//div[@class='hero__description']",XPATH,"Our Story Page Heading- Description"),
 	
 	
 	// Header - Smoker and Grills Sub-menu links
 	lnkSubMenuOffsetSmokers("//span[text()='Offset Smokers']",XPATH,"Offset Smokers - Sub Menu of Smoker & Grills"),
 	txtSubMenuOffsetSmokersPageTitle("//h1[@id='page-title-heading']",XPATH,"Sub-menu - Offset Smokers Page Heading title"),
-	txtSubMenuOffsetSmokersPageDescription("//div[@class='category-description']/p/span",XPATH,"Sub-Menu - Offset Smokers Page Description"),
+	txtSubMenuOffsetSmokersPageDescription("//div[@class='category-description']",XPATH,"Sub-Menu - Offset Smokers Page Description"),
 	
 	
 	lnkSubMenuSmokerGrillCombo ("//span[text()='Smoker/Grill Combos']",XPATH,"Smoker/Grill Combos - Sub Menu of Somoker & Grills"),
 	txtSubMenuSmokersGrillComboPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Smoker/Grill Combos - Sub Menu Page Heading title"),
-	txtSubMenuSmokersGrillComboPageDescription("//div[@class='category-description']/p/span",XPATH,"Smoker/Grill Combos - Sub Menu Page Description"),
+	txtSubMenuSmokersGrillComboPageDescription("//div[@class='category-description']",XPATH,"Smoker/Grill Combos - Sub Menu Page Description"),
 	
 	lnkSubMenuCharCoalGrill("//span[text()='Charcoal Grills']",XPATH,"Charcoal Grills - Sub Menu of Smoker & Grills"),
 	txtSubMenuCharCoalGrillPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Charcoal Grill - Sub Menu Page Heading title"),
-	txtSubMenuCharCoalGrillPageDescription("//div[@class='category-description']/p/span",XPATH,"CharCoal Grill - Sub Menu Page Description"),
+	txtSubMenuCharCoalGrillPageDescription("//div[@class='category-description']",XPATH,"CharCoal Grill - Sub Menu Page Description"),
 		
 	
 	lnkSubMenuDrumSmokers("//span[text()='Drum Smokers']",XPATH,"Drum Smokers - Sub Menu of Smoker & Grills"),
 	txtSubMenuDrumSmokersPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Drum Smokers - Sub Menu Page Heading title"),
-	txtSubMenuDrumSmokersPageDescription("//div[@class='category-description']/p/span",XPATH,"Drum Smokers - Sub Menu Page Description"),
+	txtSubMenuDrumSmokersPageDescription("//div[@class='category-description']",XPATH,"Drum Smokers - Sub Menu Page Description"),
 	
 	
 	//Header - Accessories & Parts Sub Menu links
 	lnkSubMenuTools("//span[text()='Tools']",XPATH,"Tools - Sub Menu of Accessories & Parts"),
 	txtSubMenuToolsPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Tools - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuToolsPageDescription("//div[@class='category-description']/p",XPATH,"Tools- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuToolsPageDescription("//div[@class='category-description']",XPATH,"Tools- Sub Menu Page Description of Menu Accessories & Parts"),
 	btnaccessoriesPartPageviewAccessories("//div[@class='container text-center']/a[@class='button primary']",XPATH,"Accessibility & Parts Page - Button - VIEW ALL ACCESSORIES Button"),
 	accessoriesPartPageNeedHelp("//h2[@class='parts-widget__title text-center']",XPATH,"Accessories & Parts Page - Heading - Need to find a part?"),
 	accessoriesPartsPageMostPopular("//h2[@class='product-popular__heading']",XPATH,"Accessories & Parts Page - Heading - Most Popular"),
@@ -61,25 +61,25 @@ public enum HomePageObjects implements PageObjects {
 	
 	lnkSubMenuCovers("//span[text()='Covers']",XPATH,"Covers - Sub Menu of Accessories & Parts"),
 	txtSubMenuCoversPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Covers - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuCoversPageDescription("//div[@class='category-description']/p",XPATH,"Covers- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuCoversPageDescription("//div[@class='category-description']",XPATH,"Covers- Sub Menu Page Description of Menu Accessories & Parts"),
 	
 	lnkSubMenuWood("//span[text()='Wood']",XPATH,"Wood - Sub Menu of Accessories & Parts"),
 	txtSubMenuWoodPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Wood - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuWoodPageDescription("//div[@class='category-description']/p",XPATH,"Wood- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuWoodPageDescription("//div[@class='category-description']",XPATH,"Wood- Sub Menu Page Description of Menu Accessories & Parts"),
 	
 	lnkSubMenuMods("//span[text()='Mods']",XPATH,"Mods - Sub Menu of Accessories & Parts"),
 	txtSubMenuModsPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Mods - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuModsPageDescription("//div[@class='category-description']/p",XPATH,"Mods- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuModsPageDescription("//div[@class='category-description']",XPATH,"Mods- Sub Menu Page Description of Menu Accessories & Parts"),
 	
 	
 	lnkSubMenuApparel("//span[text()='Apparel']",XPATH,"Apparel - Sub Menu of Accessories & Parts"),
 	txtSubMenuApparelPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Apparel - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuApparelPageDescription("//div[@class='category-description']/p",XPATH,"Apparel- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuApparelPageDescription("//div[@class='category-description']",XPATH,"Apparel- Sub Menu Page Description of Menu Accessories & Parts"),
 	
 	
 	lnkSubMenuParts("//span[text()='Parts']",XPATH,"Parts - Sub Menu of Accessories & Parts"),
 	txtSubMenuPartsPageTitle("//h1[@id='page-title-heading']/span",XPATH,"Parts - Sub Menu Page Heading title of Menu Accessories & Parts"),
-	txtSubMenuPartsPageDescription("//div[@class='category-description']/p",XPATH,"Parts- Sub Menu Page Description of Menu Accessories & Parts"),
+	txtSubMenuPartsPageDescription("//div[@class='category-description']",XPATH,"Parts- Sub Menu Page Description of Menu Accessories & Parts"),
 	
 	
 	//Header - The Craft Sub Menu Links
