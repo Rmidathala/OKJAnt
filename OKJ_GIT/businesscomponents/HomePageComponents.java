@@ -2789,4 +2789,9 @@ public class HomePageComponents extends ReusableLibrary {
 					Status.FAIL);
 		}
 	}
+	
+	public void refreshPage() throws InterruptedException {
+		Thread.sleep(20000);
+		driver.navigate().refresh();
+	}
 }
