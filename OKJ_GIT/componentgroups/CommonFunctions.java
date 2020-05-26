@@ -1744,10 +1744,7 @@ public class CommonFunctions extends ReusableLibrary {
 	public void homePagePopUpClose() {
 		try {
 			
-		 /*if (verifyIfElementIsPresent((driver.findElement(By.xpath("//*[@id=\'lightbox-736e2ffb-a58f-4696-a136-ddf4351b44f6-1571823542766\']/div"))), "Close button")) {
-			 clickIfElementPresent((driver.findElement(By.xpath("//*[@id=\\'lightbox-736e2ffb-a58f-4696-a136-ddf4351b44f6-1571823542766\\']/div"))), "Close button");
-			 report.updateTestLog("Pop Up Handle", "Home Page Pop up closed", Status.PASS);
-		 }*/
+		 Thread.sleep(10000);
 			if(webdriverutil.objectExists(By.xpath(HomePageObjects.btnClosePopUp.getProperty()))) {
 				clickIfElementPresent(getPageElement(HomePageObjects.btnClosePopUp),
 						HomePageObjects.btnClosePopUp.getObjectname());
@@ -1759,4 +1756,3 @@ public class CommonFunctions extends ReusableLibrary {
 		}
 	 }
 }
-

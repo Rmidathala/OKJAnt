@@ -151,6 +151,8 @@ public enum HomePageObjects implements PageObjects {
 	//Close pop up
 	btnClosePopUp("//div[@class='widget_fb_close' or @title='Close']",XPATH,"Close the pop up"),
 	
+	//*[@class='sidebar-iframe-close']
+	
 	//Footer
 	lblParts("//h3[@class='footer__headline' and text()='Parts']",XPATH,"Footer label: Parts"),
 	txtBoxPartSearch("//input[@class='form__input footer__form-input']",XPATH,"Footer - Part Search text Box"),
